@@ -23,14 +23,21 @@ public class clockPointer : MonoBehaviour
         
     }
 
+    // TODO: add animation to the rotation of the pointer
     // increase or decrease the angle of the pointer, by passing 1 or -1
     public void setAngle(int newDirection){
-        float newAngle = 30 * newDirection;
+        float newAngle = newDirection;
         Debug.Log("angle = " + newAngle);
 
         // transform.rotation = new Vector3(0, 0, newAngle);
         Vector3 rotate = new Vector3(0, 0, -newAngle);
-        transform.Rotate(rotate);
+
+        for (int i = 0; i < 30; i++)
+        {
+            transform.Rotate(rotate);
+            
+        }
+
 
     }
 }

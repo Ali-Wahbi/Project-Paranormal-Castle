@@ -7,8 +7,13 @@ public class clockHandler : MonoBehaviour
 
     public clockPointer hours;
     public clockPointer minutes;
-    int hoursTime = 7;
-    int minutesTime = 30;
+    
+    // the required solution for the clock
+    public int requiredHours;
+    public int requiredMinutes;
+    
+    int hoursTime = 10;
+    int minutesTime = 50;
     // Start is called before the first frame update
     void Start(){
         hours.setAngle(hoursTime);
@@ -21,12 +26,12 @@ public class clockHandler : MonoBehaviour
         
         
     }
-
+    
     // USE [ContextMenu("NAME")] TO MAKE A FUNCTION APPEAR IN THE CONTEXT MENU DURIGN THE RUN MODE 
 
     // increase the hours by 1, up to 11
     [ContextMenu("+1 Hour")]
-    void IncreaseOneHour(){
+    public void IncreaseOneHour(){
         hours.setAngle(1);
         hoursTime+= 1;
         if (hoursTime == 12){
@@ -35,7 +40,7 @@ public class clockHandler : MonoBehaviour
     }
     // descrease the hours by 1. if negative, set it to 11
     [ContextMenu("-1 Hour")]
-    void DescreaseOneHour(){
+    public void DescreaseOneHour(){
         hours.setAngle(-1);
         hoursTime-= 1;
         if (hoursTime == -1){
@@ -44,7 +49,7 @@ public class clockHandler : MonoBehaviour
     }
     // increase the minutes by 5, up to 55
     [ContextMenu("+5 Minute")]
-    void IncreaseFiveMinutes(){
+    public void IncreaseFiveMinutes(){
         minutes.setAngle(1);
         minutesTime+= 5;
 
@@ -54,7 +59,7 @@ public class clockHandler : MonoBehaviour
     }
     // decrease the minutes by 5. if negative, set to 55
     [ContextMenu("-5 Minute")]
-    void DescreaseFiveMinute(){
+    public void DescreaseFiveMinute(){
         minutes.setAngle(-1);
         minutesTime-= 5;
 
