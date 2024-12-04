@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class clockHandler : MonoBehaviour
 {
+
+    public UnityEvent finishEvents;
 
     public clockPointer hours;
     public clockPointer minutes;
@@ -14,17 +17,26 @@ public class clockHandler : MonoBehaviour
     
     int hoursTime = 10;
     int minutesTime = 50;
+
+    Outline outline;
     // Start is called before the first frame update
     void Start(){
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
         hours.setAngle(hoursTime);
         minutes.setAngle(minutesTime/5);
 
-        // IncreaseOneHour();
-        // IncreaseOneHour();
+        
+    }
 
-        // IncreaseFiveMinutes();
-        
-        
+    public void allowModification(){
+        ClockHandlerSingleton.isActivated = false;
+    }
+    
+    
+    public void disAllowModification(){
+        ClockHandlerSingleton.isActivated = true;
+
     }
     
     // USE [ContextMenu("NAME")] TO MAKE A FUNCTION APPEAR IN THE CONTEXT MENU DURIGN THE RUN MODE 
@@ -37,6 +49,7 @@ public class clockHandler : MonoBehaviour
         if (hoursTime == 12){
             hoursTime = 0;
         }
+        checkCorrectTime();
     }
     // descrease the hours by 1. if negative, set it to 11
     [ContextMenu("-1 Hour")]
@@ -46,6 +59,7 @@ public class clockHandler : MonoBehaviour
         if (hoursTime == -1){
             hoursTime = 11;
         }
+        checkCorrectTime();
     }
     // increase the minutes by 5, up to 55
     [ContextMenu("+5 Minute")]
@@ -56,6 +70,7 @@ public class clockHandler : MonoBehaviour
         if (minutesTime >= 60){
             minutesTime = 0;
         }
+        checkCorrectTime();
     }
     // decrease the minutes by 5. if negative, set to 55
     [ContextMenu("-5 Minute")]
@@ -66,11 +81,21 @@ public class clockHandler : MonoBehaviour
         if (minutesTime <= -1){
             minutesTime = 55;
         }
+
+        checkCorrectTime();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    // if time is correct, stop the player from any further clicking 
+    // and make the clock glow, and take the focus out of the clock
+    void checkCorrectTime(){
+        if (hoursTime == requiredHours && minutesTime == requiredMinutes){
+            Debug.Log("Player got correct time. Horray!!");
+            StartCoroutine(doFinishAnimation());
+        }
     }
+    IEnumerator doFinishAnimation(){
+        yield return new WaitForSeconds(1f);
+        finishEvents.Invoke();
+    }
+
 }

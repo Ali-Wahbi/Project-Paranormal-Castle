@@ -4,28 +4,14 @@ using UnityEngine;
 
 public class clockPointer : MonoBehaviour
 {
-    [SerializeField]
-    int initiativeTime = 0;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        // setAngle(initiativeTime);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    void getTime(){
-        
-    }
-
-    // TODO: add animation to the rotation of the pointer
     // increase or decrease the angle of the pointer, by passing 1 or -1
     public void setAngle(int newDirection){
+        StartCoroutine(rotationAnimation(newDirection));
+    }
+
+    private IEnumerator rotationAnimation(int newDirection){
         float newAngle = newDirection;
         Debug.Log("angle = " + newAngle);
 
@@ -35,9 +21,9 @@ public class clockPointer : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             transform.Rotate(rotate);
+            yield return new WaitForSeconds(0.01f * 5/3);
             
         }
-
-
     }
+
 }
