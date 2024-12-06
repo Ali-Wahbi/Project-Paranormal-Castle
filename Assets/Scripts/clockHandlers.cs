@@ -53,7 +53,7 @@ public class clockHandlers : MonoBehaviour
         float endPosition = startPosition - 0.25f;
 
 
-        // from temp -> end 
+        // from temp -> end , move down
        while(tempPosition >= endPosition){
             transform.position = new Vector3(transform.position.x, tempPosition, transform.position.z);
             tempPosition -= 0.01f;
@@ -61,7 +61,7 @@ public class clockHandlers : MonoBehaviour
        }
     
 
-        // then temp -> start
+        // then temp -> start , move up
         while(tempPosition <= startPosition){
             transform.position = new Vector3(transform.position.x, tempPosition, transform.position.z);
             tempPosition += 0.01f;

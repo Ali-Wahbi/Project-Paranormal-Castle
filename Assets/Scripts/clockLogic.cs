@@ -6,19 +6,26 @@ using UnityEngine.Events;
 public class clockHandler : MonoBehaviour
 {
 
+    // the actions that happens when the clock is sloved
     public UnityEvent finishEvents;
 
+    // the hours and minutes pointers in the clock
     public clockPointer hours;
     public clockPointer minutes;
     
-    // the required solution for the clock
+    // the required solution for the clock, minutes should be multibles of 5
+    [Range(0,11)]
     public int requiredHours;
+    [Range(0,55)]
     public int requiredMinutes;
     
-    int hoursTime = 10;
-    int minutesTime = 50;
+    // the current hours and minutes that will track the change in the rotation of the pointers
+    int hoursTime = 0;
+    int minutesTime = 0;
 
+    // outline to indicate solved clock, replace by glow in future
     Outline outline;
+
     // Start is called before the first frame update
     void Start(){
         outline = GetComponent<Outline>();
@@ -28,7 +35,7 @@ public class clockHandler : MonoBehaviour
 
         
     }
-
+    // only allow modification when the camera has focus on the clock 
     public void allowModification(){
         ClockHandlerSingleton.isActivated = false;
     }
