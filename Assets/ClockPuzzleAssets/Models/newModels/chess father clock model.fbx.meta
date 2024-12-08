@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: bdf66e3a272dd844685049741eb1bd4a
+guid: 33b77b32138c07e49bf850f25304091a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blancas
+    second: {fileID: 2100000, guid: a753e05cbea11e04190688f092bf0c36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 25fda1b232a8d504ba8e8064c972f3dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clk001_wood__Vra
+    second: {fileID: 2100000, guid: fd09bc5152e2b2644a1f049b77aa5948, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

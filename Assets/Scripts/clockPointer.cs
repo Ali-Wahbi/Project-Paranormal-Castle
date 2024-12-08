@@ -13,7 +13,7 @@ public class clockPointer : MonoBehaviour
 
     private IEnumerator rotationAnimation(int newDirection){
         float newAngle = newDirection;
-        Debug.Log("angle = " + newAngle);
+        // Debug.Log("angle = " + newAngle);
 
         // transform.rotation = new Vector3(0, 0, newAngle);
         Vector3 rotate = new Vector3(0, 0, -newAngle);

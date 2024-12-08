@@ -51,7 +51,7 @@ public class clockHandler : MonoBehaviour
     // increase the hours by 1, up to 11
     [ContextMenu("+1 Hour")]
     public void IncreaseOneHour(){
-        hours.setAngle(1);
+        hours.setAngle(-1);
         hoursTime+= 1;
         if (hoursTime == 12){
             hoursTime = 0;
@@ -61,7 +61,7 @@ public class clockHandler : MonoBehaviour
     // descrease the hours by 1. if negative, set it to 11
     [ContextMenu("-1 Hour")]
     public void DescreaseOneHour(){
-        hours.setAngle(-1);
+        hours.setAngle(1);
         hoursTime-= 1;
         if (hoursTime == -1){
             hoursTime = 11;
@@ -71,7 +71,7 @@ public class clockHandler : MonoBehaviour
     // increase the minutes by 5, up to 55
     [ContextMenu("+5 Minute")]
     public void IncreaseFiveMinutes(){
-        minutes.setAngle(1);
+        minutes.setAngle(-1);
         minutesTime+= 5;
 
         if (minutesTime >= 60){
@@ -82,7 +82,7 @@ public class clockHandler : MonoBehaviour
     // decrease the minutes by 5. if negative, set to 55
     [ContextMenu("-5 Minute")]
     public void DescreaseFiveMinute(){
-        minutes.setAngle(-1);
+        minutes.setAngle(1);
         minutesTime-= 5;
 
         if (minutesTime <= -1){
