@@ -8,6 +8,9 @@ public class clockHandlers : MonoBehaviour
     public UnityEvent events;
     Outline outline;
 
+    // dont allow the handles to be used if the clock is already solved
+    private bool isClockSolved = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +18,13 @@ public class clockHandlers : MonoBehaviour
         outline.enabled = false;
     }
 
+    public void SetClockSolved(){
+        isClockSolved = true;
+    }
+
     // show an outline on the handler
     private void OnMouseEnter() {
-        if (outline!= null && !ClockHandlerSingleton.isActivated){
+        if (outline!= null && !ClockHandlerSingleton.isActivated && !isClockSolved){
             outline.enabled = true;
         }
         
@@ -34,7 +41,7 @@ public class clockHandlers : MonoBehaviour
 
     // run the function from the clock when the player clicks on the handler
     private void OnMouseDown() {
-        if (!ClockHandlerSingleton.isActivated) {
+        if (!ClockHandlerSingleton.isActivated && !isClockSolved) {
             events.Invoke();
             doAnimation();
         }

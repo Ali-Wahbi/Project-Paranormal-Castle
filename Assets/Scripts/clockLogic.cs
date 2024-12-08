@@ -8,6 +8,7 @@ public class clockHandler : MonoBehaviour
 
     // the actions that happens when the clock is sloved
     public UnityEvent finishEvents;
+    public UnityEvent disableHandelrs;
 
     // the hours and minutes pointers in the clock
     public clockPointer hours;
@@ -103,6 +104,7 @@ public class clockHandler : MonoBehaviour
     IEnumerator doFinishAnimation(){
         yield return new WaitForSeconds(1f);
         finishEvents.Invoke();
+        disableHandelrs.Invoke();
     }
 
 }
