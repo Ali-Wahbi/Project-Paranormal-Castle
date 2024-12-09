@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     // func Invoke(): happens when the player interacts
     // interaction word: appears beside the letter (E) 
 
+    Outline outline;
     public string interactWord;
 
     [SerializeField]
@@ -16,12 +17,20 @@ public class Interactable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        outline = GetComponent<Outline>();
+        DisableOutline();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+   
+   public void Interact(){
+        onInteraction.Invoke();
+   }
+
+    public void DisableOutline(){
+        outline.enabled = false;
+    }
+    
+    public void EnableOutline(){
+        outline.enabled = true;
     }
 }
