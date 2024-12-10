@@ -12,6 +12,7 @@ public class PlayerInteractor : MonoBehaviour
     public float playerReach = 3f;
     Interactable currentInteractable;
 
+    public bool canInteract = true;
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +26,7 @@ public class PlayerInteractor : MonoBehaviour
             RaycastHit hit;
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
             if (Physics.Raycast(ray, out hit, playerReach)){
-                if (hit.collider.tag == "Interactable"){
+                if (hit.collider.tag == "Interactable" && canInteract){
                     
                     Interactable newInteractable = hit.collider.GetComponent<Interactable>();
 
@@ -65,5 +66,9 @@ public class PlayerInteractor : MonoBehaviour
             currentInteractable.DisableOutline();
             currentInteractable = null;
         }
+    }
+
+    public void SetCanInteract(bool newState){
+        canInteract = newState;
     }
 }

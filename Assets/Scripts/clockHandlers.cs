@@ -24,6 +24,7 @@ public class clockHandlers : MonoBehaviour
 
     // show an outline on the handler
     private void OnMouseEnter() {
+        Debug.Log("MOUSE ENTERED");
         if (outline!= null && !ClockHandlerSingleton.isActivated && !isClockSolved){
             outline.enabled = true;
         }
@@ -40,6 +41,7 @@ public class clockHandlers : MonoBehaviour
     }
 
     // run the function from the clock when the player clicks on the handler
+    [ContextMenu("Click Handler")]
     private void OnMouseDown() {
         if (!ClockHandlerSingleton.isActivated && !isClockSolved) {
             events.Invoke();
