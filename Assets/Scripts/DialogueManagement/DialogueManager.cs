@@ -8,20 +8,30 @@ public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
 
+    [SerializeField] private Animator animator;
     public TMP_Text nameText;
     public TMP_Text dialogueText;
 
     public float waitTime;
 
+    private bool dialogueShown = false;
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
     }
+    void Update() {
+        if (dialogueShown && Input.GetKeyDown(KeyCode.F)){
+            DisplayNextSentence();
+        }
+    }
 
     
     public void StartDialogue(Dialogue dialogue){
+        animator.SetBool("DialogueStarts", true);
+        animator.SetBool("DialogueEnds", false);
         
+        dialogueShown = true;
         // Debug.Log("Dialogue with:" + dialogue.name);
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -29,7 +39,6 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentenceEvent.sentences);
         }
-
         DisplayNextSentence();
     }
 
@@ -59,7 +68,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    IEnumerator Wait(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+    }
+
     private void EndDialogue(){
-        Debug.Log("End of dialogue reached");
+        
+        animator.SetBool("DialogueStarts", false);
+        animator.SetBool("DialogueEnds", true);
+        
+        dialogueShown = false;
+        
+        // Debug.Log("End of dialogue reached");
     }
 }

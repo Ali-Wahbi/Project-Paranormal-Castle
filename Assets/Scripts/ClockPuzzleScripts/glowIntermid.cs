@@ -7,6 +7,7 @@ public class glowIntermid : MonoBehaviour
     
     [SerializeField]
     private GameObject chessPiece;
+    public float intensity = 1.5f;
 
     // Color(r,g,b,a) = Color(1f, 0.9f, 0.5f)
 
@@ -32,7 +33,7 @@ public class glowIntermid : MonoBehaviour
             r+= 1/60f;
             g+= 0.9f/60;
             b+= 0.5f/60;
-            rend.material.SetColor("_EmissionColor", new Color(r, g, b));
+            rend.material.SetColor("_EmissionColor", new Color(r, g, b) * intensity);
             yield return new WaitForSeconds(1/30);
         }
     }

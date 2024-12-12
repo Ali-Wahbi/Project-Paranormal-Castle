@@ -2833,6 +2833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chessPiece: {fileID: 1345068122770938905}
+  intensity: 1.3
 --- !u!114 &1076469581 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1711963077079215450, guid: 38c043c8414d7ff4d8e5c87782e22e95, type: 3}
@@ -2916,6 +2917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chessPiece: {fileID: 148554630}
+  intensity: 1.3
 --- !u!1 &1172685884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,6 +3930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chessPiece: {fileID: 1602589668}
+  intensity: 1.3
 --- !u!1 &1371183151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5017,6 +5020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chessPiece: {fileID: 2107487746}
+  intensity: 1.3
 --- !u!1 &1673435476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,6 +5066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chessPiece: {fileID: 832669749}
+  intensity: 1.3
 --- !u!1 &1772803616
 GameObject:
   m_ObjectHideFlags: 0
