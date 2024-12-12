@@ -24,7 +24,7 @@ public class clockHandlers : MonoBehaviour
 
     // show an outline on the handler
     private void OnMouseEnter() {
-        Debug.Log("MOUSE ENTERED");
+        //Debug.Log("MOUSE ENTERED");
         if (outline!= null && !ClockHandlerSingleton.isActivated && !isClockSolved){
             outline.enabled = true;
         }

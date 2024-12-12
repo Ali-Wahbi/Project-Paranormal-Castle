@@ -13,8 +13,9 @@ public class HudController : MonoBehaviour
    [SerializeField]
    TMP_Text interactionText;
 
-   public void EnableInteractionText(string text){
-        interactionText.text = text + "(F)";
+   public void EnableInteractionText(string text, Color textColor){
+        interactionText.text = text + " (F)";
+        interactionText.color = textColor;
         interactionText.gameObject.SetActive(true);
    }
    public void DisableInteractionText(){

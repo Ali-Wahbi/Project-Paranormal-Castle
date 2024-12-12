@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
 
     Outline outline;
     public string interactWord;
+    [SerializeField] public Color interactionColor = Color.white;
 
     [SerializeField]
     private UnityEvent onInteraction; 

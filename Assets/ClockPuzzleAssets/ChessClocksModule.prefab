@@ -1169,6 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactWord: Inspect
+  interactionColor: {r: 1, g: 0.74240893, b: 0.380503, a: 1}
   onInteraction:
     m_PersistentCalls:
       m_Calls:

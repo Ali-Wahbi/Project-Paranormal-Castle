@@ -57,7 +57,7 @@ public class PlayerInteractor : MonoBehaviour
     void SetNewCurrentInteractable(Interactable interactable){
         currentInteractable = interactable;
         currentInteractable.EnableOutline();
-        HudController.instance.EnableInteractionText(currentInteractable.interactWord);
+        HudController.instance.EnableInteractionText(currentInteractable.interactWord, currentInteractable.interactionColor);
         
     }
     void DisableCurrentInteractable(){
