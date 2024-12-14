@@ -84,7 +84,8 @@ public class playercontroller : MonoBehaviour
     {
         if (characterController.isGrounded && context.performed)
         {
-            jump();
+            animator.Play("jump");
+            //jump();
         }
     }
 
