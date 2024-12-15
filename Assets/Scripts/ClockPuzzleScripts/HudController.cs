@@ -14,7 +14,7 @@ public class HudController : MonoBehaviour
    TMP_Text interactionText;
 
    public void EnableInteractionText(string text, Color textColor){
-        interactionText.text = text + " (F)";
+        interactionText.text = "(F)\n" + text;
         interactionText.color = textColor;
         interactionText.gameObject.SetActive(true);
    }

@@ -28,10 +28,16 @@ public class Interactable : MonoBehaviour
    }
 
     public void DisableOutline(){
-        outline.enabled = false;
+        // If the Outline exists
+        if (outline){
+            outline.enabled = false;
+        }
     }
     
     public void EnableOutline(){
-        outline.enabled = true;
+        // If the Outline exists
+        if (outline){
+            outline.enabled = true;
+        }
     }
 }

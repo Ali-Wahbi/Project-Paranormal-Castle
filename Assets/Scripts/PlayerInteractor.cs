@@ -71,4 +71,9 @@ public class PlayerInteractor : MonoBehaviour
     public void SetCanInteract(bool newState){
         canInteract = newState;
     }
+
+
+    public void logDummyText(string text){
+        Debug.Log(text);
+    }
 }
