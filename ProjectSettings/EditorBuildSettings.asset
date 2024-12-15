@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ClockPuzzleTry.unity
+    guid: 9f1453fdc7c7091428e619303ab0e7bd
+  - enabled: 1
+    path: Assets/Scenes/RiddleRoom.unity
+    guid: cfbfdad0e18d44840a19bd65a0145cbd
   m_configObjects: {}
