@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8325bddebdc55e4eb9b58bdf28d3194, type: 3}
-  m_Name: SpadeKey
+  m_Name: SignBoard
   m_EditorClassIdentifier: 
-  ItemName: Spade Key
-  ItemDescription: A Useful Spade Key. Perhaps can be used to open a closed door.
-  SmallIcon: {fileID: 0}
-  LargIcon: {fileID: 0}
+  ItemName: Sign Board
+  ItemDescription: A Weird wooden sign board found in the area.
+  SmallIcon: {fileID: 21300000, guid: 0e7c1aae7fac21c4dbcc52d2eb6aa9e8, type: 3}
+  LargIcon: {fileID: 21300000, guid: 61cdee32c526c514986ef065e9888c08, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DiamondKey
   m_EditorClassIdentifier: 
   ItemName: Diamond Key
-  ItemDescription: A Useful Key. Perhaps can be used to open a closed door.
-  SmallIcon: {fileID: 0}
-  LargIcon: {fileID: 0}
+  ItemDescription: A Useful Diamond Key. Perhaps can be used to open a closed door.
+  SmallIcon: {fileID: 21300000, guid: 0e7c1aae7fac21c4dbcc52d2eb6aa9e8, type: 3}
+  LargIcon: {fileID: 21300000, guid: 61cdee32c526c514986ef065e9888c08, type: 3}
