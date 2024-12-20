@@ -27,11 +27,12 @@ public class InventoryManager : MonoBehaviour
     public List<InventoryItem> _inventory;
     public InventoryItem _currentSelected;
 
-    bool _isInventoryFilled = false;
+
     bool _isShown = false;
 
     private void Start() {
         AddItemToInventory(exampleItem);
+        refreshSlotInventory();
     }
 
     private void Update() {
@@ -85,15 +86,6 @@ public class InventoryManager : MonoBehaviour
         anim.SetTrigger("enterAnim");
         _isShown = true;
 
-        if (!_isInventoryFilled){
-
-            foreach (InventoryItem item in _inventory){
-                slotManager.AddItem(item);
-                Debug.Log("Slot manager added child");
-            }
-
-            _isInventoryFilled = true;
-        }
 
         // set the _currentSelected item to the first item
         // if (_currentSelected == null){
@@ -111,14 +103,22 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemToInventory(InventoryItem item){
         _inventory.Add(item);
-        _isInventoryFilled = false;
-        slotManager.ClearChildren();
+        slotManager.AddItem(item);
     }
 
     // TODO finish after creating collectable, storable object script 
     public void AddItemFromCollectable(Collectable collectable){
         InventoryItem item = collectable.getInventoryItem();
+        // Debug.Log("Got Item: " + item.ItemName);
         AddItemToInventory(item);
+    }
+
+    void refreshSlotInventory(){
+        slotManager.ClearChildren();
+        foreach (InventoryItem item in _inventory){
+            slotManager.AddItem(item);
+            // Debug.Log("Slot manager added child");
+        }
     }
 
     public void removeItem(InventoryItem item){

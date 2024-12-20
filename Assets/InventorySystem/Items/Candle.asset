@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8325bddebdc55e4eb9b58bdf28d3194, type: 3}
-  m_Name: DiamondKey
+  m_Name: Candle
   m_EditorClassIdentifier: 
-  ItemName: Diamond Key
-  ItemDescription: A Useful Diamond Key. Perhaps can be used to open a closed door.
-  SmallIcon: {fileID: 21300000, guid: 36b6ed82438cc33448a8c5518c5ed0eb, type: 3}
-  LargIcon: {fileID: 21300000, guid: 79d63389a9dde954b96f5bfdb6974330, type: 3}
+  ItemName: Candle
+  ItemDescription: Small candle. Used to light up a small room
+  SmallIcon: {fileID: 21300000, guid: 90580f9e2bc6b2d4f96836a2f64b7cf0, type: 3}
+  LargIcon: {fileID: 21300000, guid: 3bc332e7733172e4995845cfd741b251, type: 3}

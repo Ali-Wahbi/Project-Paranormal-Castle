@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Spade Key
   ItemDescription: A Useful Spade Key. Perhaps can be used to open a closed door.
-  SmallIcon: {fileID: 0}
-  LargIcon: {fileID: 0}
+  SmallIcon: {fileID: 21300000, guid: 0df55bc5ff570894ab5830a574ce2535, type: 3}
+  LargIcon: {fileID: 21300000, guid: 5136e09df6319f64693a06b28738c852, type: 3}
