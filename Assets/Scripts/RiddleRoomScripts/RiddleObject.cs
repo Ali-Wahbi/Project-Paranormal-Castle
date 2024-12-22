@@ -13,6 +13,10 @@ public class RiddleObject : MonoBehaviour
         if(ItemName == ""){
             ItemName = "incorrect";
         }
+        Interactable interactable = gameObject.GetComponent<Interactable>();
+        if(interactable != null){
+            interactable.interactWord = "Take " + ItemName;
+        }
     }
 
     [ContextMenu("Get Name")]

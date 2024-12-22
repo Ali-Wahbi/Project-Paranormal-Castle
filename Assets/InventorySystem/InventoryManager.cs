@@ -109,6 +109,7 @@ public class InventoryManager : MonoBehaviour
     // TODO finish after creating collectable, storable object script 
     public void AddItemFromCollectable(Collectable collectable){
         InventoryItem item = collectable.getInventoryItem();
+     
         // Debug.Log("Got Item: " + item.ItemName);
         AddItemToInventory(item);
     }
