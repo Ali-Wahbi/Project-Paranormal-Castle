@@ -11,4 +11,11 @@ public class Collectable : MonoBehaviour
         // Destroy the object after collecting
         return ObjectItem;
     }
+
+    private void Start() {
+        Interactable interactable = gameObject.GetComponent<Interactable>();
+        if(interactable != null){
+            interactable.interactWord = "Collect " + ObjectItem.ItemName;
+        }
+    }
 }

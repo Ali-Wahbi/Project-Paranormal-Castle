@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "SwitchRun",
+                    "type": "Button",
+                    "id": "8e674a7c-e779-4989-82d0-501b4c3e6b26",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -130,6 +139,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0455096-d513-4447-9d6f-e2ae8698f7c0",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchRun",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -3322,7 +3322,7 @@ GameObject:
   - component: {fileID: 7995051217906172841}
   - component: {fileID: 5837940491570111776}
   - component: {fileID: 926039536152275316}
-  - component: {fileID: 3863188649355964653}
+  - component: {fileID: 6938837523211358454}
   - component: {fileID: 726219017879702822}
   - component: {fileID: 1043044093672723369}
   m_Layer: 0
@@ -3398,7 +3398,7 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.78, z: 0}
---- !u!114 &3863188649355964653
+--- !u!114 &6938837523211358454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3407,20 +3407,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7220735595671114235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a0a822c230af0841a5edd03c4d788f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3898de6f189b33141a43b3b3bb0e2e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  runSpeed: 10
-  looksenesitivity: 15
-  jumpheight: 2
-  gravity: 9.81
-  turnSmoothTime: 0.01
-  turnSmoothVelocity: 0
+  charController: {fileID: 926039536152275316}
   cam: {fileID: 0}
-  isRunning: 0
-  lookvector: {x: 0, y: 0}
-  rotation: {x: 0, y: 0, z: 0}
+  speed: 2
+  runSpeed: 6
+  walkSpeed: 0
+  turnSmoothTime: 0.3
 --- !u!114 &726219017879702822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3448,7 +3443,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3863188649355964653}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: playercontroller, Assembly-CSharp
         m_MethodName: Onmove
         m_Mode: 0
@@ -3464,7 +3459,7 @@ MonoBehaviour:
     m_ActionName: controls/move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3863188649355964653}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: playercontroller, Assembly-CSharp
         m_MethodName: onlook
         m_Mode: 0
@@ -3480,7 +3475,7 @@ MonoBehaviour:
     m_ActionName: controls/look[/Mouse/delta,/Touchscreen/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3863188649355964653}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: playercontroller, Assembly-CSharp
         m_MethodName: Onjump
         m_Mode: 0

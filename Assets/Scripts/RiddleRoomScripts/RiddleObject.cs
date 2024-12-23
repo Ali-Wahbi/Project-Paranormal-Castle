@@ -7,6 +7,9 @@ public class RiddleObject : MonoBehaviour
     // the name of the item
     [SerializeField]
     private string ItemName;
+
+    [SerializeField, TextArea(6,12)]
+    private string ItemDescription;
     
     private void Start() {
         // if no name is provided, it defaults to incorrect, indicating wrong item

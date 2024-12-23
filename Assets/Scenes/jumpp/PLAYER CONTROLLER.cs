@@ -12,15 +12,15 @@ public class playercontroller : MonoBehaviour
     private float walkSpeed;
     
     [SerializeField]
-    private float runSpeed;
+    private float runSpeed = 5f;
 
     [SerializeField]
 
-    private float looksenesitivity = 5;
+    private float looksenesitivity = 15f;
 
     [SerializeField]
 
-    private float jumpheight = 10;
+    private float jumpheight = 2f;
 
     [SerializeField]
 
@@ -59,7 +59,7 @@ public class playercontroller : MonoBehaviour
     {
         movevector = context.ReadValue<Vector2>();
         
-        animator.SetBool("isRunning", isRunning);
+
         if(movevector.magnitude > 0)
 
         {
@@ -109,7 +109,7 @@ public class playercontroller : MonoBehaviour
     {
         if (characterController.isGrounded && context.performed)
         {
-            animator.Play("Jumping");
+            // animator.Play("Jumping");
             // jump();
         }
     }
@@ -120,8 +120,10 @@ public class playercontroller : MonoBehaviour
     }
 
     [ContextMenu("Switch Run")]
-    private void SwitchIsRunning(){
+    public void SwitchIsRunning(){
         isRunning = !isRunning;
+
+        animator.SetBool("isRunning", isRunning);
 
         if (isRunning){
             moveSpeed = runSpeed;

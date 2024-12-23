@@ -90,6 +90,11 @@ public class RiddleManager : MonoBehaviour
                 
                 // restart the puzzle
                 AllWrongDialogue.TriggerDialogue();
+                
+                currentRiddle = 0;
+                AssignNextRiddle();
+                AssignRiddleDialogue();
+
 
             }else{
                 
