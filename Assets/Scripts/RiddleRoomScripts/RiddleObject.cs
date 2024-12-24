@@ -8,13 +8,15 @@ public class RiddleObject : MonoBehaviour
     [SerializeField]
     private string ItemName;
 
-    [SerializeField, TextArea(6,12)]
-    private string ItemDescription;
+    // The corresponding item of the object, makes accessing the name and description easier
+    [SerializeField] RiddleObjectItem Item; 
     
     private void Start() {
         // if no name is provided, it defaults to incorrect, indicating wrong item
-        if(ItemName == ""){
+        if(Item.ItemName == ""){
             ItemName = "incorrect";
+        } else {
+            ItemName = Item.ItemName;
         }
         Interactable interactable = gameObject.GetComponent<Interactable>();
         if(interactable != null){
@@ -26,5 +28,9 @@ public class RiddleObject : MonoBehaviour
     public string getRiddleItemName(){
         Debug.Log("Got item: " + ItemName);
         return ItemName;
+    }
+
+    public string getRiddleItemDescription(){
+        return Item.ItemDescription;
     }
 }

@@ -988,7 +988,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &279861189
 Transform:
@@ -998,13 +998,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279861185}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: -3.72}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.893, y: 0, z: 0.029000044}
   m_LocalScale: {x: 0.40034, y: 0.40034, z: 0.40034}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1561008216}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 823211749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &279861190
 MonoBehaviour:
@@ -1272,6 +1272,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368818774}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &410072213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410072214}
+  - component: {fileID: 410072215}
+  m_Layer: 0
+  m_Name: Riddle 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410072214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410072213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2147410168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &410072215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410072213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6177d374ec0d0cf419c37a792f15f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainDm: {fileID: 536574256}
+  dialogue:
+    name: 
+    sentenceEvents:
+    - name: Owl
+      sentences: You did well so far.
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: Try to solve this one as well
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: I cradle care in colors deep, a mark of love that time may keep.
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: "\rMy touch adoring, my warmth is true,\r\nWhat am I, that bonds
+        and hues?"
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Nasser
+      sentences: This sounds easy
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Nasser
+      sentences: Let me see....
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &423180825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1467,6 @@ GameObject:
   - component: {fileID: 458640922}
   - component: {fileID: 458640925}
   - component: {fileID: 458640924}
-  - component: {fileID: 458640923}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -1411,27 +1489,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 535072994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &458640923
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458640921}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &458640924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1482,6 +1539,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458640921}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &475552707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475552708}
+  - component: {fileID: 475552711}
+  - component: {fileID: 475552710}
+  - component: {fileID: 475552709}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475552708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475552707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.10833, y: 4.0667, z: 1.6083}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1361364856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &475552709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475552707}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &475552710
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475552707}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &475552711
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475552707}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &535072992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1655,7 @@ GameObject:
   - component: {fileID: 535072994}
   - component: {fileID: 535072993}
   - component: {fileID: 535072995}
+  - component: {fileID: 535072996}
   m_Layer: 0
   m_Name: RiddleObject Inco
   m_TagString: Interactable
@@ -1513,7 +1676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: Incorrect
-  ItemDescription: 
+  Item: {fileID: 11400000, guid: 66cb25d1c881e1b439fffad195430506, type: 2}
 --- !u!4 &535072994
 Transform:
   m_ObjectHideFlags: 0
@@ -1559,6 +1722,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!135 &535072996
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535072992}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &536574256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1500181777382266453, guid: 138976a500e3fa54bb6ba9b8ca3addcd, type: 3}
@@ -1707,9 +1891,93 @@ Transform:
   - {fileID: 1410948092}
   - {fileID: 688547311}
   - {fileID: 1343722110}
+  - {fileID: 1837435424}
+  - {fileID: 844708152}
   - {fileID: 535072994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &624096704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624096705}
+  - component: {fileID: 624096706}
+  m_Layer: 0
+  m_Name: Riddle 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &624096705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624096704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2147410168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624096706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624096704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6177d374ec0d0cf419c37a792f15f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainDm: {fileID: 536574256}
+  dialogue:
+    name: 
+    sentenceEvents:
+    - name: Owl
+      sentences: This is the last one.
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: Solve this riddle and prove your heart is true.
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: In noble hands, I guard and aid.
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: "In jealous hearts, a treachery\u2019s blade.\r\nI gleam with pride
+        or cast deep dread,\r\nWhat am I, both honored and fled?"
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: 'I gleam with pride or cast deep dread,
+
+        What am I, both
+        honored and fled?'
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Nasser
+      sentences: Let me look around....
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!224 &646469402 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3215717967492855955, guid: dfc78717a4b4fb94583bdeae3d042b6c, type: 3}
@@ -1753,7 +2021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: Oud
-  ItemDescription: 
+  Item: {fileID: 11400000, guid: ba7eba3d6e1d42947ab3427248ae41e4, type: 2}
 --- !u!4 &688547311
 Transform:
   m_ObjectHideFlags: 0
@@ -1924,6 +2192,158 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797112450}
   m_CullTransparentMesh: 1
+--- !u!1 &823211748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 823211749}
+  m_Layer: 0
+  m_Name: Collectables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &823211749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823211748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.893, y: 1.2, z: -3.749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 279861189}
+  - {fileID: 1112334057}
+  - {fileID: 1266192829}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &844708151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844708152}
+  - component: {fileID: 844708156}
+  - component: {fileID: 844708155}
+  - component: {fileID: 844708153}
+  - component: {fileID: 844708157}
+  m_Layer: 0
+  m_Name: RiddleObject 5
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &844708152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844708151}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.03, y: 1.06, z: -1.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1374357266}
+  m_Father: {fileID: 584375045}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844708153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844708151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.8784314, b: 0, a: 1}
+  outlineWidth: 7.1
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &844708155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844708151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008509439950dd84bbd0ea943588ed57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactWord: Take
+  interactionColor: {r: 1, g: 1, b: 1, a: 1}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1903354258}
+        m_TargetAssemblyTypeName: RiddleManager, Assembly-CSharp
+        m_MethodName: checkRiddleObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 844708156}
+          m_ObjectArgumentAssemblyTypeName: RiddleObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &844708156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844708151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36627589dce147d4194d61c1dad1a822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: 
+  Item: {fileID: 11400000, guid: 0532c5bee9c9fa6438c250d330054688, type: 2}
+--- !u!135 &844708157
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844708151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.45
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &871550309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,17 +2392,12 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: Buffer
-      sentences: Buffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: You Got them all Correctly
       SenteceFinishedEvents:
         m_PersistentCalls:
           m_Calls: []
-    - name: Nasser
+    - name: Owl
       sentences: Surprised I am!
       SenteceFinishedEvents:
         m_PersistentCalls:
@@ -2302,11 +2717,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: Buffer
-      sentences: Buffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: You Got too many wrong
       SenteceFinishedEvents:
@@ -2395,7 +2805,7 @@ MonoBehaviour:
         m_MethodName: AddItemFromCollectable
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1112334053}
+          m_ObjectArgument: {fileID: 279861190}
           m_ObjectArgumentAssemblyTypeName: Collectable, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2443,13 +2853,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112334052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 1.2, z: -3.69}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.043, y: 0, z: 0.059000015}
   m_LocalScale: {x: 0.24353883, y: 0.24353883, z: 0.24353883}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1261754682}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 823211749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1134463918
 GameObject:
@@ -2617,23 +3027,6 @@ MonoBehaviour:
   dialogue:
     name: Owl
     sentenceEvents:
-    - name: Buffer
-      sentences: BufferBuffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1903354258}
-            m_TargetAssemblyTypeName: RiddleManager, Assembly-CSharp
-            m_MethodName: AssignRiddleDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
     - name: Owl
       sentences: You Solve Riddles
       SenteceFinishedEvents:
@@ -2719,11 +3112,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: Buffer
-      sentences: Buffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: The 2nd one is easier.
       SenteceFinishedEvents:
@@ -3032,7 +3420,7 @@ MonoBehaviour:
         m_MethodName: AddItemFromCollectable
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1266192825}
+          m_ObjectArgument: {fileID: 279861190}
           m_ObjectArgumentAssemblyTypeName: Collectable, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3080,13 +3468,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266192824}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.893, y: 1.2, z: -3.749}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.24353883, y: 0.24353883, z: 0.24353883}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 172218697}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 823211749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273592386
 GameObject:
@@ -3397,7 +3785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: Henna Bowl
-  ItemDescription: 
+  Item: {fileID: 11400000, guid: b34b7ef175d126f44a81075da550180f, type: 2}
 --- !u!4 &1343722110
 Transform:
   m_ObjectHideFlags: 0
@@ -3669,6 +4057,122 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1361364855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361364856}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1361364856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361364855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.06, y: 2.07, z: 11.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 475552708}
+  - {fileID: 1901514673}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1374357265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374357266}
+  - component: {fileID: 1374357268}
+  - component: {fileID: 1374357267}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1374357266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374357265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 844708152}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1374357267
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374357265}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1374357268
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374357265}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1410948090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,10 +4206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: Falcon Hood
-  ItemDescription: "The falcon\u2019s hood symbolizes Nasser's search for clarity
-    and understanding,  like a falcon waiting for its hood to be lifted to see clearly
-    and take flight. The hood represents his restrained perspective and his bravery
-    in uncovering the truth about his family\u2019s tragic fate."
+  Item: {fileID: 11400000, guid: 07bd8fbaa717e0d4e9377b170d7a5715, type: 2}
 --- !u!4 &1410948092
 Transform:
   m_ObjectHideFlags: 0
@@ -3948,6 +4449,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
@@ -3956,15 +4461,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23551896
+      value: 0.23551899
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000019710864
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.776651e-10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5372016776835466720, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4048,7 +4553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4064,11 +4569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -3.773532e-15
+      value: -0.00000001797647
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.9835467e-16
+      value: 0.000000004012529
       objectReference: {fileID: 0}
     - target: {fileID: 8135054219131806048, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_FollowOffset.y
@@ -4128,11 +4633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183439060914597822, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000028831515
+      value: 0.00000003223461
       objectReference: {fileID: 0}
     - target: {fileID: 9183439060914597822, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000007544692
+      value: -0.000000008435221
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4639,6 +5144,200 @@ Transform:
   - {fileID: 93012210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -195.27, z: 0}
+--- !u!1 &1753613764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753613765}
+  - component: {fileID: 1753613766}
+  m_Layer: 0
+  m_Name: Riddle 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753613765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753613764}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2147410168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753613766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753613764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6177d374ec0d0cf419c37a792f15f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainDm: {fileID: 536574256}
+  dialogue:
+    name: 
+    sentenceEvents:
+    - name: Owl
+      sentences: Try to solve this riddle as well
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: "Once whole, I gleamed with grace and charm, \r\nNow scattered far,
+        I bear alarm."
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: "A child\u2019s trust. pure and bright."
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Owl
+      sentences: "\rWhat am I?, having shattered, \r\ni once glimmered."
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+    - name: Nasser
+      sentences: hmmm.....
+      SenteceFinishedEvents:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!1 &1837435423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837435424}
+  - component: {fileID: 1837435428}
+  - component: {fileID: 1837435427}
+  - component: {fileID: 1837435425}
+  - component: {fileID: 1837435429}
+  m_Layer: 0
+  m_Name: RiddleObject 4
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837435424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837435423}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.03, y: 0.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1859822308}
+  m_Father: {fileID: 584375045}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1837435425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837435423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.8784314, b: 0, a: 1}
+  outlineWidth: 7.1
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1837435427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837435423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008509439950dd84bbd0ea943588ed57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactWord: Take
+  interactionColor: {r: 1, g: 1, b: 1, a: 1}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1903354258}
+        m_TargetAssemblyTypeName: RiddleManager, Assembly-CSharp
+        m_MethodName: checkRiddleObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1837435428}
+          m_ObjectArgumentAssemblyTypeName: RiddleObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1837435428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837435423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36627589dce147d4194d61c1dad1a822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: 
+  Item: {fileID: 11400000, guid: db260c194f59b3a45968436f8379ad20, type: 2}
+--- !u!136 &1837435429
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837435423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.51
+  m_Height: 1.32
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1857618716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4687,11 +5386,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: Buffer
-      sentences: Buffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: No!
       SenteceFinishedEvents:
@@ -4707,6 +5401,89 @@ MonoBehaviour:
       SenteceFinishedEvents:
         m_PersistentCalls:
           m_Calls: []
+--- !u!1 &1859822307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859822308}
+  - component: {fileID: 1859822310}
+  - component: {fileID: 1859822309}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1859822308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859822307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.88, y: 0.42, z: 0.88}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1837435424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1859822309
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859822307}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1859822310
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859822307}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1883094334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,6 +5589,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883094334}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1901514672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901514673}
+  - component: {fileID: 1901514676}
+  - component: {fileID: 1901514675}
+  - component: {fileID: 1901514674}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901514673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901514672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.161, y: 0, z: -0.625}
+  m_LocalScale: {x: 0.2420845, y: 0.2420845, z: 0.2420845}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1361364856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1901514674
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901514672}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1901514675
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901514672}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8dc27bd7587644741a9b83f0e0b58f28, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1901514676
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901514672}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1903354256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,10 +5748,14 @@ MonoBehaviour:
   - {fileID: 1410948091}
   - {fileID: 688547310}
   - {fileID: 1343722109}
+  - {fileID: 1837435428}
+  - {fileID: 844708156}
   RiddleDialogues:
   - {fileID: 1977199660}
   - {fileID: 1199578162}
-  - {fileID: 1988602167}
+  - {fileID: 410072215}
+  - {fileID: 1753613766}
+  - {fileID: 624096706}
   onCorrectDialogue: {fileID: 2047212048}
   onIncorrectDialogue: {fileID: 1857618718}
   LastDialogue: {fileID: 871550311}
@@ -4891,10 +5777,12 @@ MonoBehaviour:
   - {fileID: 1266192825}
   - {fileID: 279861190}
   riddleObjects:
+  - {fileID: 535072993}
   - {fileID: 1410948091}
   - {fileID: 688547310}
   - {fileID: 1343722109}
-  - {fileID: 535072993}
+  - {fileID: 1837435428}
+  - {fileID: 844708156}
 --- !u!114 &1930754693 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3792155012423105949, guid: dfc78717a4b4fb94583bdeae3d042b6c, type: 3}
@@ -4954,11 +5842,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: Buffer
-      sentences: Buffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: this is the first riddle
       SenteceFinishedEvents:
@@ -4978,7 +5861,7 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     - name: Owl
-      sentences: What am I, a falcon imprisoned?"
+      sentences: What am I, a falcon imprisoned?
       SenteceFinishedEvents:
         m_PersistentCalls:
           m_Calls: []
@@ -5010,7 +5893,7 @@ GameObject:
   - component: {fileID: 1988602166}
   - component: {fileID: 1988602167}
   m_Layer: 0
-  m_Name: Riddle 3
+  m_Name: Riddle 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5047,11 +5930,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: Buffer
-      sentences: Buffer
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: Solve this riddle to proceed to the next one
       SenteceFinishedEvents:
@@ -5336,11 +6214,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentenceEvents:
-    - name: ' '
-      sentences: ' '
-      SenteceFinishedEvents:
-        m_PersistentCalls:
-          m_Calls: []
     - name: Owl
       sentences: That was correct!
       SenteceFinishedEvents:
@@ -5586,6 +6459,9 @@ Transform:
   m_Children:
   - {fileID: 1977199659}
   - {fileID: 1199578161}
+  - {fileID: 410072214}
+  - {fileID: 1753613765}
+  - {fileID: 624096705}
   - {fileID: 1988602166}
   - {fileID: 2047212047}
   - {fileID: 1857618717}
@@ -6260,19 +7136,18 @@ SceneRoots:
   - {fileID: 1722253575}
   - {fileID: 2302552970961355257}
   - {fileID: 1722485429}
+  - {fileID: 213437013}
   - {fileID: 166615884}
   - {fileID: 145891892}
   - {fileID: 895325669}
   - {fileID: 1590610643}
   - {fileID: 1274314346}
   - {fileID: 1180115421}
-  - {fileID: 213437013}
   - {fileID: 913333048}
   - {fileID: 1750542024}
-  - {fileID: 279861189}
-  - {fileID: 1112334057}
-  - {fileID: 1266192829}
+  - {fileID: 823211749}
   - {fileID: 1903354257}
   - {fileID: 584375045}
   - {fileID: 2147410168}
   - {fileID: 1455868388}
+  - {fileID: 1361364856}

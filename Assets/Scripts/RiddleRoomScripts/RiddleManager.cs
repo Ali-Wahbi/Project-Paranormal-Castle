@@ -39,10 +39,12 @@ public class RiddleManager : MonoBehaviour
     // dialogue to display when the player exceeds maximum tries 
     public DialogueTrigger AllWrongDialogue;
 
-
+    RiddleRoomManager riddleManager;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        riddleManager = GetComponent<RiddleRoomManager>();
+        
         if (CorrectRiddleObjects.Count != 0){
             AssignNextRiddle();
         }else{
@@ -73,6 +75,8 @@ public class RiddleManager : MonoBehaviour
                 
                 // reached last puzzle
                 LastDialogue.TriggerDialogue();
+                Owl.SetDialogue(LastDialogue);
+                riddleManager.disableRiddleObjects();
 
             }else{
                 
@@ -92,6 +96,7 @@ public class RiddleManager : MonoBehaviour
                 AllWrongDialogue.TriggerDialogue();
                 
                 currentRiddle = 0;
+                currentMistakesCount = 0;
                 AssignNextRiddle();
                 AssignRiddleDialogue();
 

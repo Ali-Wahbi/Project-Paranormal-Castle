@@ -44,7 +44,7 @@ public class RiddleRoomManager : MonoBehaviour
         }
     }
 
-    void enableRiddleObjects(){
+    public void enableRiddleObjects(){
         foreach (RiddleObject objects in riddleObjects)
         {
             Interactable interact = objects.GetComponent<Interactable>();
@@ -52,7 +52,7 @@ public class RiddleRoomManager : MonoBehaviour
         }
     }
 
-    void disableRiddleObjects(){
+    public void disableRiddleObjects(){
         foreach (RiddleObject objects in riddleObjects)
         {
             Interactable interact = objects.GetComponent<Interactable>();

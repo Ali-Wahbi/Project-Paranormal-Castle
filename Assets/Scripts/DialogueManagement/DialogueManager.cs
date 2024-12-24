@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         sentenceEndEvents = new Queue<UnityEvent>();
     }
     void Update() {
-        if (dialogueShown && Input.GetKeyUp(KeyCode.F)){
+        if (dialogueShown && Input.GetKeyUp(KeyCode.Space)){
             if(sentenceEndEvents.Count > 0){
                 sentenceEndEvents.Dequeue().Invoke();
             }

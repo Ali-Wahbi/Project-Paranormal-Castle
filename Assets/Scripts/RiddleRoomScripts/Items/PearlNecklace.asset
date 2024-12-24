@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9b585b5f3b42644bdf3dd719d5186d, type: 3}
+  m_Name: PearlNecklace
+  m_EditorClassIdentifier: 
+  ItemName: Broken pearl necklace
+  ItemDescription: "The broken pearl necklace represents the sister\u2019s innocence
+    and her naive belief that life was unbroken and beautiful. The shattering of
+    the necklace parallels the shattering of her world, emphasizing the loss of her
+    innocence when witnessing the tragedy, and the loss of trust in what once seemed
+    perfect.\r\n"

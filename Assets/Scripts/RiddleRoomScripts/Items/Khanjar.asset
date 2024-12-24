@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9b585b5f3b42644bdf3dd719d5186d, type: 3}
+  m_Name: Khanjar
+  m_EditorClassIdentifier: 
+  ItemName: Khanjar
+  ItemDescription: "The khanjar, traditionally a symbol of honor and protection,
+    becomes a dark token of betrayal. The cousin\u2019s greed and jealousy turn this
+    object of pride into a weapon of destruction, marking the betrayal that tore
+    the family apart."
