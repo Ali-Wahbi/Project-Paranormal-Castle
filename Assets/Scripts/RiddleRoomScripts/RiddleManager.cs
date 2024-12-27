@@ -78,10 +78,12 @@ public class RiddleManager : MonoBehaviour
                 Owl.SetDialogue(LastDialogue);
                 riddleManager.disableRiddleObjects();
 
-            }else{
+            } else {
                 
                 // proceed to the next riddle
+                
                 onCorrectDialogue.TriggerDialogue();
+                PutItemInShelf();
                 
                 AssignNextRiddle();
                 AssignRiddleDialogue();
@@ -94,9 +96,10 @@ public class RiddleManager : MonoBehaviour
                 
                 // restart the puzzle
                 AllWrongDialogue.TriggerDialogue();
-                
+                PutItemsInOriginPlace();
                 currentRiddle = 0;
                 currentMistakesCount = 0;
+                
                 AssignNextRiddle();
                 AssignRiddleDialogue();
 
@@ -108,6 +111,17 @@ public class RiddleManager : MonoBehaviour
                 
                 AssignRiddleDialogue();
             }
+        }
+    }
+
+    void PutItemInShelf(){
+        currentObject.GetToEndPos();
+    }
+
+    void PutItemsInOriginPlace(){
+        foreach (RiddleObject RO in CorrectRiddleObjects)
+        {
+            RO.GetToStartPos();
         }
     }
 }

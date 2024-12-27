@@ -14,6 +14,7 @@ public class characterScript : MonoBehaviour
     public float walkSpeed;
     
     bool isRunning = false;
+    bool canMove = true;
     Vector2 moveVector;
 
     float turnSmoothVelocity;
@@ -28,8 +29,10 @@ public class characterScript : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        Move();
+    {   
+        if (canMove){
+            Move();
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context){
@@ -71,5 +74,13 @@ public class characterScript : MonoBehaviour
         {
             speed = walkSpeed;
         }
+    }
+
+    public void EnableMovement(){
+        canMove = true;
+    }
+
+    public void DisableMovement(){
+        canMove = false;
     }
 }

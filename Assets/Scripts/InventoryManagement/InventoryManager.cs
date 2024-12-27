@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     // 
 
     [SerializeField] private InventorySlotManager slotManager;
-    
+    [SerializeField] private GeneralGameManager GameManager;
     [SerializeField] private Animator anim;
 
     public TMP_Text ItemName;
@@ -39,10 +39,13 @@ public class InventoryManager : MonoBehaviour
         // click on inventory Button
         if(Input.GetKeyUp(KeyCode.I)){
             if(_isShown){
+                GameManager.EnablePlayerMovement();
                 hideInventory();
-            } else
-            {
+            } else {
+                GameManager.DisablePlayerMovement();
                 showInventory();
+
+                // GetItemNames();
             }
         }
     }
@@ -128,4 +131,27 @@ public class InventoryManager : MonoBehaviour
         }
         _inventory.Remove(item);
     }
+
+    public List<string> GetItemNames(){
+        List<string> names = new List<string>();
+
+        foreach (InventoryItem item in _inventory)
+        {
+            names.Add(item.ItemName);
+        }
+        // Debug.Log("Names Are: " + string.Join(" ", names));
+
+        return names;
+    }
+
+    void SaveInventory(){
+        // get all of the items names from the inventory using GetItemNames() and save it to a file
+    }
+
+    void LoadInventory(){
+        // get all of the items names from the save, 
+        // then get a list of all of the items in the game from the Items folder,
+        // then add the items to the inventory 
+    }
+
 }

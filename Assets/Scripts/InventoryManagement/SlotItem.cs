@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class SlotItem : MonoBehaviour
 {
-    public InventoryItem exampleItem;
     public Image ItemImage;
     public InventoryItem _item;
     // Start is called before the first frame update
@@ -25,7 +24,6 @@ public class SlotItem : MonoBehaviour
     public void setSlotItem(InventoryItem item){
         // Debug.Log("setSlotItem");
         _item = item;
-        exampleItem = item;
         ItemImage.sprite = item.SmallIcon;
         // Debug.Log("Slot has new Item");
     }
