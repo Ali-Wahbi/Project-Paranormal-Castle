@@ -18,4 +18,8 @@ public class Collectable : MonoBehaviour
             interactable.interactWord = "Collect " + ObjectItem.ItemName;
         }
     }
+
+    public void SetIsEnabled(bool isEnabled){
+        gameObject.SetActive(isEnabled);
+    }
 }

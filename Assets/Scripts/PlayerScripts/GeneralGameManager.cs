@@ -11,7 +11,7 @@ public class GeneralGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetToStartPosition();
+        // SetToStartPosition();
         character = GetComponent<characterScript>(); 
     }
 
@@ -32,5 +32,9 @@ public class GeneralGameManager : MonoBehaviour
         if(character != null){
             character.DisableMovement();
         }
+    }
+
+    public void SetStartPosition(Transform NewPos){
+        StartPosition = NewPos;
     }
 }
