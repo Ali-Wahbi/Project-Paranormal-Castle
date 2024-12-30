@@ -1,1 +1,1 @@
-{"InvItems":[]}
+{"InvItems":["Spade Key"]}
