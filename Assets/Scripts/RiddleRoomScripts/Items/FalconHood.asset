@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9b585b5f3b42644bdf3dd719d5186d, type: 3}
+  m_Name: FalconHood
+  m_EditorClassIdentifier: 
+  ItemName: Falcon's Hood
+  ItemDescription: "The falcon\u2019s hood symbolizes Nasser's search for clarity
+    and understanding,  like a falcon waiting for its hood to be lifted to see clearly
+    and take flight. The hood represents his restrained perspective and his bravery
+    in uncovering the truth about his family\u2019s tragic fate."

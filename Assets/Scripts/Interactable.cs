@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour
         DisableOutline();
     }
 
-   
+   [ContextMenu("Interact")]
    public void Interact(){
         onInteraction.Invoke();
    }

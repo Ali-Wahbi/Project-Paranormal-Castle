@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private Animator animator;
     
+    [SerializeField] private UnityEvent onDialogueStarts; 
     [SerializeField] private UnityEvent onDialogueEnds; 
     // public TMP_Text nameText;
     public TMP_Text dialogueText;
@@ -29,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         sentenceEndEvents = new Queue<UnityEvent>();
     }
     void Update() {
-        if (dialogueShown && Input.GetKeyUp(KeyCode.F)){
+        if (dialogueShown && Input.GetKeyUp(KeyCode.Space)){
             if(sentenceEndEvents.Count > 0){
                 sentenceEndEvents.Dequeue().Invoke();
             }
@@ -39,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     
     public void StartDialogue(Dialogue dialogue){
+        onDialogueStarts.Invoke();
         animator.SetBool("DialogueStarts", true);
         animator.SetBool("DialogueEnds", false);
         
