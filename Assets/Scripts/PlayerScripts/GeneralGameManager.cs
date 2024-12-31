@@ -8,10 +8,11 @@ public class GeneralGameManager : MonoBehaviour
     [SerializeField] Transform StartPosition;
 
     characterScript character;
+
     // Start is called before the first frame update
     void Start()
     {
-        // SetToStartPosition();
+        SetToStartPosition();
         character = GetComponent<characterScript>(); 
     }
 
@@ -37,4 +38,5 @@ public class GeneralGameManager : MonoBehaviour
     public void SetStartPosition(Transform NewPos){
         StartPosition = NewPos;
     }
+
 }

@@ -11,14 +11,14 @@ public class MirrorRoomManager : MonoBehaviour
     // when an item is clicked, it checks if the object in the list
     // if not it increases the number of mistakes by one
     //  and highlight a bulb with red color indicating one mistake
-    
+
     [SerializeField] private List<GameObject> PuzzleItems;
     [SerializeField] private List<GameObject> MistakeIndicators;
     public Color incorrectColor;
     public Color originalColor;
     [SerializeField] private int maxMistakes;
     int numberOfMistakes = 0;  
-    int numberOfCorrect = 0;
+    public int numberOfCorrect = 0;
 
     public UnityEvent onEndingEvents;
     
@@ -80,6 +80,7 @@ public class MirrorRoomManager : MonoBehaviour
     void RestartPuzzle(){
         Debug.Log("Puzzle restarted");
         numberOfMistakes = 0;
+        numberOfCorrect = 0;
 
         // reset the color of the spheres to its orginal color
         foreach (GameObject item in MistakeIndicators)
