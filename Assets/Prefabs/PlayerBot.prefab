@@ -2736,6 +2736,7 @@ MonoBehaviour:
   speed: 2
   runSpeed: 6
   walkSpeed: 0
+  gravity: 0.51
   turnSmoothTime: 0.3
 --- !u!114 &726219017879702822
 MonoBehaviour:
@@ -2834,6 +2835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPosition: {fileID: 0}
+  LookCamera: {fileID: 5668645404425233639}
+  originalCamSpeedY: 0
+  originalCamSpeedX: 0
 --- !u!1 &7234582388054081749
 GameObject:
   m_ObjectHideFlags: 0

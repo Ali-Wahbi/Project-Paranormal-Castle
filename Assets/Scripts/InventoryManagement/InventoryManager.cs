@@ -49,11 +49,11 @@ public class InventoryManager : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.I)){
             if(_isShown){
                 Debug.Log("Hide inventory");
-                GameManager.EnablePlayerMovement();
+                GameManager.EnablePlayer();
                 hideInventory();
             } else {
                 Debug.Log("Show inventory");
-                GameManager.DisablePlayerMovement();
+                GameManager.DisablePlayer();
                 showInventory();
 
                 // GetItemNames();

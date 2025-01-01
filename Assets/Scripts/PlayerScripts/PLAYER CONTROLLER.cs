@@ -35,7 +35,7 @@ public class playercontroller : MonoBehaviour
     private Vector2 movevector;
     public Vector2 lookvector;
     public Vector3 rotation;
-    private float verticalvelocity;
+    public float verticalvelocity;
 
     private CharacterController characterController;
 
