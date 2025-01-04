@@ -1,0 +1,928 @@
+fileFormatVersion: 2
+guid: 5aff84fb206c4c34487e6a25fa75f865
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blueCircGif_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5847dfb18785e4e8963432878a2801
+      internalID: -905098290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52d0f851cf97414783af2917f71d07a
+      internalID: 4321371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb204ba464970046bbcf44536d26ac0
+      internalID: -333303516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70400ed543afe3c418fc97fc04a0a4f2
+      internalID: 383534074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6767bb4641448a498aff33fda3cfc2b
+      internalID: 1800744357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ce802b051caa24693e22078802949e
+      internalID: -1090266413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2493.3333
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba774c0a21925640b9b51f2fc628ac1
+      internalID: -1954652454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf802acb77f4484aa174b713b133d39
+      internalID: -205132418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f76dab625e27954f9950fd1d797c564
+      internalID: -1429777530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf06272ef18fe1441b5a83b79cdf50fb
+      internalID: 930703879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17219c3e654d31e458411c5ea993ffc5
+      internalID: -522137608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8141d6924b5a4034cadd9f3dce74d836
+      internalID: 884367132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_12
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c88c01a04b5ce43bd7156594cfdf84
+      internalID: 1771857299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_13
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1995.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699dad2d054a8474cbf0deb01f61c7f6
+      internalID: -663458125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ba5f64da07202439c142d5719054b3
+      internalID: 1046470891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc78dbff67cc1fa40a52963cd014e5df
+      internalID: -1988888564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250db32a064e58c4781639d5ec387b10
+      internalID: 1249732815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de032f5ed88b9e4ea658e6f5f716e43
+      internalID: -1477675851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_18
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986e936e226d8b8409e2a6143a672686
+      internalID: -986569700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_19
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b507ccf63c33ad345a44e19d06d51ed2
+      internalID: 42011157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_20
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1497.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0932fe6c9cbb3444f849441325bad739
+      internalID: 1764501520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20810af517dde7541a313206a5bb24a1
+      internalID: -457440340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_22
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253e338195439fd4993aa39bdfdcc799
+      internalID: 1906155403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2c31e48900eae4fb5a812ae4fb17a8
+      internalID: -274055892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_24
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148ffc2abb156a54c968224e4da88149
+      internalID: -1373129170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8720d498971df428b70ef7331c098e
+      internalID: -893636170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_26
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ff932c8ca54a5438ce393f6ddf8000
+      internalID: 2093908766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_27
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 999.3334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32b11524a6c7a34ea3a7fe5fda5ad9e
+      internalID: 472219185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d487a21a93cdf8438bda19dcbe1ddb9
+      internalID: 1603906923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5e68622295a664097d7b8e0ea191bf
+      internalID: -1383470223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_30
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be099214be0f7024daeab0537ec2c050
+      internalID: 72636450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_31
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d056ae5cb024c35409822f82e74b611f
+      internalID: 2009356380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_32
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a5a7aef57cacf4aaffe99d9496b07c
+      internalID: 1909958364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_33
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000a6b80419a0c243826b1fe6f1de932
+      internalID: 1697488557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_34
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 501.33334
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a130d3758a0c9d478af5f2eddd31a1d
+      internalID: 1470213899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.3333435
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc469d9900f93304b8a65c368dcf5d66
+      internalID: 1172736560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCircGif_36
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 3.3333435
+        width: 500
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f22b787af500045bc15a74002fc3b1
+      internalID: 140603356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: edb551594a005214dafbd33bedd2f995
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blueCircGif_0: -905098290
+      blueCircGif_1: 4321371
+      blueCircGif_10: -522137608
+      blueCircGif_11: 884367132
+      blueCircGif_12: 1771857299
+      blueCircGif_13: -663458125
+      blueCircGif_14: 1046470891
+      blueCircGif_15: -1988888564
+      blueCircGif_16: 1249732815
+      blueCircGif_17: -1477675851
+      blueCircGif_18: -986569700
+      blueCircGif_19: 42011157
+      blueCircGif_2: -333303516
+      blueCircGif_20: 1764501520
+      blueCircGif_21: -457440340
+      blueCircGif_22: 1906155403
+      blueCircGif_23: -274055892
+      blueCircGif_24: -1373129170
+      blueCircGif_25: -893636170
+      blueCircGif_26: 2093908766
+      blueCircGif_27: 472219185
+      blueCircGif_28: 1603906923
+      blueCircGif_29: -1383470223
+      blueCircGif_3: 383534074
+      blueCircGif_30: 72636450
+      blueCircGif_31: 2009356380
+      blueCircGif_32: 1909958364
+      blueCircGif_33: 1697488557
+      blueCircGif_34: 1470213899
+      blueCircGif_35: 1172736560
+      blueCircGif_36: 140603356
+      blueCircGif_4: 1800744357
+      blueCircGif_5: -1090266413
+      blueCircGif_6: -1954652454
+      blueCircGif_7: -205132418
+      blueCircGif_8: -1429777530
+      blueCircGif_9: 930703879
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

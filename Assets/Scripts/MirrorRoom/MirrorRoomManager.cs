@@ -14,6 +14,11 @@ public class MirrorRoomManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> PuzzleItems;
     [SerializeField] private List<GameObject> MistakeIndicators;
+
+    [SerializeField] private MistakesIndicator mistakesIndicatorManager;
+    [SerializeField] private DialogueTrigger mistakesIndicatorDialogue;
+
+
     public Color incorrectColor;
     public Color originalColor;
     [SerializeField] private int maxMistakes;
@@ -47,14 +52,21 @@ public class MirrorRoomManager : MonoBehaviour
 
     // when the player selects an incorrect item 
     void HandleMistakes(){
+
         // get current sphere to glow red
         GameObject currentSphere = MistakeIndicators[numberOfMistakes];
         ChangeSphereColor(currentSphere, incorrectColor);
+
+        // show mistake in the screen 
+        mistakesIndicatorManager.AddMistakes();
+
         numberOfMistakes++;
         if (numberOfMistakes >= maxMistakes){
             // restart puzzle
             Debug.Log("Player failed at puzzle. Restart.");
-            RestartPuzzle();
+            // the dialogue if all mistakes are passed and then reset the puzzle
+            mistakesIndicatorDialogue.TriggerDialogue();
+            // RestartPuzzle();
 
         } else {
             
@@ -77,10 +89,12 @@ public class MirrorRoomManager : MonoBehaviour
         }
     }
 
-    void RestartPuzzle(){
+    public void RestartPuzzle(){
         Debug.Log("Puzzle restarted");
         numberOfMistakes = 0;
         numberOfCorrect = 0;
+
+        
 
         // reset the color of the spheres to its orginal color
         foreach (GameObject item in MistakeIndicators)

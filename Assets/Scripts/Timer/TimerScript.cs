@@ -5,7 +5,7 @@ using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
-    
+    #region Properties
     TMP_Text TimerText;
     [SerializeField] GameObject TimerTextObject;
 
@@ -19,6 +19,8 @@ public class TimerScript : MonoBehaviour
 
     bool isRunning = true; 
 
+    #endregion
+    
     private void Start() {
         TimerText = TimerTextObject.GetComponent<TMP_Text>();
         currentTime = MaxTime;
@@ -42,6 +44,7 @@ public class TimerScript : MonoBehaviour
         
     }
 
+    #region Count Time down
     void StartCountDown(){
 
 
@@ -66,7 +69,9 @@ public class TimerScript : MonoBehaviour
         Debug.Log("Timer Reached end");
 
     }
+    #endregion
 
+    #region CountUp
     // void StartCountUp(){
 
     //     StartCoroutine(DoCountUp());
@@ -92,15 +97,19 @@ public class TimerScript : MonoBehaviour
 
     // }
 
+    #endregion
+
+    //Show The timer with an animation
     public void ShowTimer(){
         TimerTextObject.SetActive(true);
     }
+    //Hide The timer with an animation
     public void HideTimer(){
         // fix hide timer and make an animation 
         TimerTextObject.SetActive(false);
     }
 
-
+    //set the text in the UI screen
     void SetTimeText(int time){
 
         TimerText.text = timer + time;
