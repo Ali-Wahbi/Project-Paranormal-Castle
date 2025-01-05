@@ -12,7 +12,7 @@ public class CollectablesManager : MonoBehaviour
     public void LoadInventoryItems(List<InventoryItem> inventoryItems){
         Debug.Log("Disabling collectable");
         foreach(Collectable collItem in LevelCollectables){
-            if (inventoryItems.Contains(collItem.getInventoryItem())){
+            if (collItem && inventoryItems.Contains(collItem.getInventoryItem())){
                 collItem.SetIsEnabled(false);
             }
         }

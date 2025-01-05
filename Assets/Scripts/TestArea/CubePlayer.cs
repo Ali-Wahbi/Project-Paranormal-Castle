@@ -1,27 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PrimeTween;
 
 public class CubePlayer : MonoBehaviour
 {   
     
 
     public GameObject cube;
-    public Sides currentFloorSide;
 
     public float MoveVector = 1;
     public float RotateAngle = 90;
 
-    public Vector3 MoveVertical;
-    public Vector3 MoveHorizontal;
+    Vector3 MoveVertical;
+    Vector3 MoveHorizontal;
 
-    public Vector3 RotateVertical;
-    public Vector3 RotateHorizontal;
+    Vector3 RotateVertical;
+    Vector3 RotateHorizontal;
 
     public bool canMove = true;
+
+    [SerializeField] Rigidbody rb;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        MoveVector = transform.localScale.x;
         // add => up , subtract => down
         MoveVertical    =  new Vector3(0, 0, MoveVector);
         // add => right , subtract => left
@@ -80,16 +83,19 @@ public class CubePlayer : MonoBehaviour
         canMove = false;
         StartCoroutine(CubeMoving(moveDir));
         // transform.position += moveDir;
+
+
     }
 
     void RotateCube(Vector3 rotateDir){
         canMove = false;
         StartCoroutine(CubeRotation(rotateDir));
+        
 
     }
 
     IEnumerator CubeMoving(Vector3 moveDir){
-        float time = 10f;
+        float time = 8f;
 
         for (int i = 0; i < time; i++)
         {
@@ -97,25 +103,30 @@ public class CubePlayer : MonoBehaviour
             yield return new WaitForSeconds(0.1f/time);
         }
 
+        rb.isKinematic = false;
+
 
     }
+
+    
 
     IEnumerator CubeRotation(Vector3 rotateDir){
         // Debug.Log(rotateDir.magnitude);
         float rotateLength = rotateDir.magnitude;
-        float time = 10f;
+        float time = 4f;
 
         for (int i = 0; i < time*2; i++)
         {
             cube.transform.Rotate(rotateDir/(time*2), Space.World);
             yield return new WaitForSeconds(0.1f/(time*2));
         }
-        canMove = true;
     }
 
     public void FloorSide(Sides side){
-        Debug.Log("At floor is side: " + side);
-        currentFloorSide = side;
+        // Debug.Log("At floor is side: " + side);
+
+        canMove = true;
+        rb.isKinematic = true;
     }
 }
 public enum Sides{

@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
+    [SerializeField] bool UseIndex = true;
     [SerializeField] int NextRoomIndex;
     [SerializeField] string NextRoomName;
-    [SerializeField] bool UseIndex = true;
 
     [SerializeField] InventoryItem RequiredItem;
     [SerializeField] InventoryManager MainInventory;
