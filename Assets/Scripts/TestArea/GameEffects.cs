@@ -12,8 +12,8 @@ public class GameEffects : MonoBehaviour
     public float duration = 1.0f;
     public float frequency = 10f;
 
-    // [SerializeField] UnityEvent onShakeStart;
-    // [SerializeField] UnityEvent onShakeEnd;
+    [SerializeField] UnityEvent onShakeStart;
+    [SerializeField] UnityEvent onShakeEnd;
 
     public void ShakeCamera(){
         StartShake();
@@ -22,12 +22,12 @@ public class GameEffects : MonoBehaviour
     }
 
     void StartShake(){
-        // onShakeStart.Invoke();
+        onShakeStart.Invoke();
         cm.GetComponent<CinemachineBrain>().enabled = false;
     }
 
     void EndShake(){
-        // onShakeEnd.Invoke();
+        onShakeEnd.Invoke();
         cm.GetComponent<CinemachineBrain>().enabled = true;
     }
 

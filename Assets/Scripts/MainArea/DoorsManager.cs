@@ -25,17 +25,17 @@ public class DoorsManager : MonoBehaviour
     }
 
 
-
+    // called from doors used to go from area to another
     public void SetLastUsed(Transform lastDoor){
         lastUsedDoor = lastDoor;
-        Debug.Log("Last used door changed");
 
         Save();
     }
 
     void Save(){
         PosSaver saver = new PosSaver{
-            pos = lastUsedDoor.position
+            pos = lastUsedDoor.position,
+            rot = lastUsedDoor.parent.localEulerAngles
         };
 
         string saveString = JsonUtility.ToJson(saver);
@@ -43,28 +43,29 @@ public class DoorsManager : MonoBehaviour
         CheckFileDir();
 
         File.WriteAllText(fullPath + fileName, saveString);
-        Debug.Log("Last used pos is saved");
+        // Debug.Log("Last used pos is saved");
 
     }
 
-    [ContextMenu("Load Pos")]
     void Load(){
         if (File.Exists(fullPath + fileName)){
             string loadString = File.ReadAllText(fullPath + fileName);
-            Debug.Log("Loaded last Pos.");
+            // Debug.Log("Loaded last Pos.");
 
             PosSaver loader = JsonUtility.FromJson<PosSaver>(loadString);
             
-            Debug.Log($"loaded: {loader.pos} .");
+            // Debug.Log($"loaded: {loader.pos} .");
 
             lastUsedDoor.position = loader.pos;
+            lastUsedDoor.eulerAngles = loader.rot;
         }
 
     }
 
-    
+    // saves the position and rotation
     class PosSaver{
         public Vector3 pos;
+        public Vector3 rot;
     }
 
     void CheckFileDir(){

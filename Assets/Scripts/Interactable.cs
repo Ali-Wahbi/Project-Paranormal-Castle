@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour
 {
     // every Interactable object should have: 
@@ -15,6 +16,10 @@ public class Interactable : MonoBehaviour
 
     [SerializeField]
     private UnityEvent onInteraction; 
+
+    private void Reset() {
+        transform.tag = "Interactable";
+    }
     // Start is called before the first frame update
     void Start()
     {

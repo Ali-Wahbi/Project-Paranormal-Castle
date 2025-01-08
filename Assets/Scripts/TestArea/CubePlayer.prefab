@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 6556618817879516890}
   - component: {fileID: 8623664520942876587}
   - component: {fileID: 2659809839387281349}
+  - component: {fileID: 3284715954178485284}
   m_Layer: 0
   m_Name: CubePlayer
   m_TagString: Untagged
@@ -412,6 +413,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3284715954178485284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3033810769354949189}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.81662196, y: 0.88999593, z: 0.068342865}
+  m_Center: {x: 0.010047239, y: -0.008001952, z: 0.5784155}
 --- !u!1 &3780870843935051843
 GameObject:
   m_ObjectHideFlags: 0

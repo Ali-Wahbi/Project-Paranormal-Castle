@@ -24,14 +24,18 @@ public class GeneralGameManager : MonoBehaviour
         interactor = GetComponent<PlayerInteractor>();
 
         // get original speed of the camera
-        originalCamSpeedY = LookCamera.m_YAxis.m_MaxSpeed;
-        originalCamSpeedX = LookCamera.m_XAxis.m_MaxSpeed;
+        SetToOriginalSpeed();
+    }
+
+    private void Reset() {
+        Debug.Log("General player Reset is called");
     }
 
 
     void SetToStartPosition(){
         if(StartPosition){
             transform.position = StartPosition.position;
+            transform.eulerAngles = new Vector3(0,StartPosition.eulerAngles.y - 90,0);
         }
     }
 
@@ -75,11 +79,18 @@ public class GeneralGameManager : MonoBehaviour
     // allow the player to move the camera 
     void EnableCameraMovement(){
         if(LookCamera){
-
-            LookCamera.m_YAxis.m_MaxSpeed = originalCamSpeedY;
-
-            LookCamera.m_XAxis.m_MaxSpeed = originalCamSpeedX;
+            SetToOriginalSpeed();
         }
+    }
+
+    void SetToOriginalSpeed(){
+        // set the speed of the camera based on the original speed
+        LookCamera.m_YAxis.m_MaxSpeed = originalCamSpeedY;
+        LookCamera.m_XAxis.m_MaxSpeed = originalCamSpeedX;
+
+        // set the angle of the camera based on the direction the player is facing
+        LookCamera.m_XAxis.Value = StartPosition.eulerAngles.y - 90;
+        Debug.Log("camera x value: "+LookCamera.m_XAxis.Value);
     }
 
     // don't allow the player to move the camera

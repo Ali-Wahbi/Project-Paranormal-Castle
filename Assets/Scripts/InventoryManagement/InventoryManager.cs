@@ -17,12 +17,14 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private CollectablesManager CollectManager;
     [SerializeField] private GeneralGameManager GameManager;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject InspectButton;
 
     [Header("Ui Elements")]
     public TMP_Text ItemName;
     public TMP_Text ItemDescription;
 
     public Image itemImage;
+    public Image inspectImage;
     
     //remove exampleItem later
     public InventoryItem exampleItem;
@@ -33,6 +35,7 @@ public class InventoryManager : MonoBehaviour
 
 
     bool _isShown = false;
+    bool _isInspectShown = false;
 
     private void Awake() {
         // AddItemToInventory(exampleItem);
@@ -48,9 +51,11 @@ public class InventoryManager : MonoBehaviour
         // click on inventory Button
         if(Input.GetKeyUp(KeyCode.I)){
             if(_isShown){
-                Debug.Log("Hide inventory");
-                GameManager.EnablePlayer();
-                hideInventory();
+                if (!_isInspectShown){
+                    Debug.Log("Hide inventory");
+                    GameManager.EnablePlayer();
+                    hideInventory();
+                }
             } else {
                 Debug.Log("Show inventory");
                 GameManager.DisablePlayer();
@@ -68,6 +73,10 @@ public class InventoryManager : MonoBehaviour
         // ClearInventory();
     }
 
+    void CheckInspectButton(){
+        InspectButton.SetActive(_currentSelected.isInspectable);
+    }
+
     public void setCurrentItem(InventoryItem item){
         // InventoryItem item = slotItem.getSlotItem();
         if(_currentSelected != item){
@@ -83,6 +92,7 @@ public class InventoryManager : MonoBehaviour
             itemImage.sprite = item.LargIcon;
 
             _currentSelected = item;
+            CheckInspectButton();
         }
     }
 
@@ -116,6 +126,23 @@ public class InventoryManager : MonoBehaviour
         _isShown = false;
 
     }
+
+    void InventoryShowState(bool state){
+        gameObject.SetActive(state);
+    }
+
+    public void ShowInspectImage(){
+        inspectImage.sprite = _currentSelected.LargIcon;
+        _isInspectShown = true;
+        anim.SetTrigger("enterInspect");
+    }
+
+
+    public void HideInspectImage(){
+        _isInspectShown = false;
+        anim.SetTrigger("exitInspect");
+    }
+
 
     public void AddItemToInventory(InventoryItem item){
         _inventory.Add(item);
@@ -171,7 +198,7 @@ public class InventoryManager : MonoBehaviour
             InvItems = GetItemNames()
         };
         string saveString = JsonUtility.ToJson(saver);
-        Debug.Log("Save Items: " + saveString);
+        // Debug.Log("Save Items: " + saveString);
 
         CheckFileDir();
         File.WriteAllText(fullPath + fileName, saveString);
@@ -189,7 +216,7 @@ public class InventoryManager : MonoBehaviour
 
             // load the data from the file    
             string loadString = File.ReadAllText(fullPath + fileName);
-            Debug.Log("Load Items: " + loadString);
+            // Debug.Log("Load Items: " + loadString);
             InventorySaver InvLoad = JsonUtility.FromJson<InventorySaver>(loadString);
 
 
@@ -230,7 +257,7 @@ public class InventoryManager : MonoBehaviour
     void ClearInventory(){
         _inventory.Clear();
 
-        Debug.Log("Inventory Cleared");
+        // Debug.Log("Inventory Cleared");
     }
 
     Object[] GetAllItemNames(){
