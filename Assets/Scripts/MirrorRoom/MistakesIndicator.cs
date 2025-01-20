@@ -12,8 +12,8 @@ public class MistakesIndicator : MonoBehaviour
     [SerializeField] Animator animator3;
 
     [Header("Animators Controllers")]
-    [SerializeField] AnimatorController animatorCircle;
-    [SerializeField] AnimatorController animatorCross;
+    [SerializeField] UnityEditor.Animations.AnimatorController animatorCircle;
+    [SerializeField] UnityEditor.Animations.AnimatorController animatorCross;
 
     int mistakesCounter = 0;
 

@@ -1,0 +1,3 @@
+[*.cs]
+indent_brace_style = K&R
+insert_final_newline = true
