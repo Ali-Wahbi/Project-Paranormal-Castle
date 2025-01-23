@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEditor.Animations;
 
 public class MistakesIndicator : MonoBehaviour
 {
@@ -12,12 +11,13 @@ public class MistakesIndicator : MonoBehaviour
     [SerializeField] Animator animator3;
 
     [Header("Animators Controllers")]
-    [SerializeField] UnityEditor.Animations.AnimatorController animatorCircle;
-    [SerializeField] UnityEditor.Animations.AnimatorController animatorCross;
+    [SerializeField] RuntimeAnimatorController animatorCircle;
+    [SerializeField] RuntimeAnimatorController animatorCross;
 
     int mistakesCounter = 0;
 
-    private void Start() {
+    private void Start()
+    {
         SetAllAnimCircle();
         Debug.Log(animator1.runtimeAnimatorController);
         // animator2.Play();
@@ -25,7 +25,8 @@ public class MistakesIndicator : MonoBehaviour
     }
 
     // Set All the mistake indicators to a circle animation and reset the counter
-    void SetAllAnimCircle(){
+    void SetAllAnimCircle()
+    {
         mistakesCounter = 0;
         animator1.runtimeAnimatorController = animatorCircle;
         animator2.runtimeAnimatorController = animatorCircle;
@@ -34,20 +35,23 @@ public class MistakesIndicator : MonoBehaviour
 
     // add a mistake and show it in the screen
     [ContextMenu("Add Mistake")]
-    public void AddMistakes(){
+    public void AddMistakes()
+    {
         ChangeCurrentToCross();
         mistakesCounter++;
     }
 
     // calls the set function
     [ContextMenu("Reset Mistakes")]
-    public void ResetMistakes(){
+    public void ResetMistakes()
+    {
         Debug.Log("Reseting mistakes");
         SetAllAnimCircle();
     }
 
     // change the current indicator to a cross animation
-    void ChangeCurrentToCross(){
+    void ChangeCurrentToCross()
+    {
         switch (mistakesCounter)
         {
             case 0:
@@ -59,7 +63,7 @@ public class MistakesIndicator : MonoBehaviour
             case 2:
                 animator3.runtimeAnimatorController = animatorCross;
                 break;
-            default: 
+            default:
                 break;
         }
     }

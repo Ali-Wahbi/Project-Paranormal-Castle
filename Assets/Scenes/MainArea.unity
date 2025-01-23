@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 12198852}
   - component: {fileID: 12198851}
   m_Layer: 0
-  m_Name: collectableObject - SignBoard
+  m_Name: collectableObject - PhotoSlice1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae705ef235658b34abbd7606ef96e2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectItem: {fileID: 11400000, guid: 2ecea4030fab09847baf169ef74b87f8, type: 2}
+  ObjectItem: {fileID: 11400000, guid: cedf48844e5630943b6d023e7950ddea, type: 2}
 --- !u!114 &12198852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008509439950dd84bbd0ea943588ed57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactWord: Collect
+  interactWord: Collect Photo Slice
   interactionColor: {r: 0.65723264, g: 0.9640441, b: 1, a: 1}
   onInteraction:
     m_PersistentCalls:
@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 1237340725}
   - component: {fileID: 1237340724}
   m_Layer: 0
-  m_Name: collectableObject - Book
+  m_Name: collectableObject - PhotoSlice2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae705ef235658b34abbd7606ef96e2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectItem: {fileID: 11400000, guid: 1956b287710f65a4980f36f21d261618, type: 2}
+  ObjectItem: {fileID: 11400000, guid: 55d464997c38a824b9280340c7dac760, type: 2}
 --- !u!114 &1237340725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008509439950dd84bbd0ea943588ed57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactWord: Collect
+  interactWord: Collect Photo Slice
   interactionColor: {r: 0.65723264, g: 0.9640441, b: 1, a: 1}
   onInteraction:
     m_PersistentCalls:
@@ -1590,7 +1590,7 @@ GameObject:
   - component: {fileID: 1291672236}
   - component: {fileID: 1291672235}
   m_Layer: 0
-  m_Name: collectableObject - Candle
+  m_Name: collectableObject - PhotoSlice3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2770,7 +2770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2782,15 +2782,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23551899
+      value: 0.23551896
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.000000020991493
       objectReference: {fileID: 0}
     - target: {fileID: 4652679517342104240, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.000000005086993
       objectReference: {fileID: 0}
     - target: {fileID: 5372016776835466720, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2823,6 +2823,14 @@ PrefabInstance:
     - target: {fileID: 5668645404425233639, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_YAxis.Value
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668645404425233639, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
+      propertyPath: m_XAxis.m_MaxSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668645404425233639, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
+      propertyPath: m_YAxis.m_MaxSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5668645404425233639, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_Orbits.Array.data[0].m_Height
@@ -2898,7 +2906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2914,11 +2922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.000000014543274
       objectReference: {fileID: 0}
     - target: {fileID: 8013258999776092235, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.0000000032462049
       objectReference: {fileID: 0}
     - target: {fileID: 8135054219131806048, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_XAxis.Value
@@ -2954,11 +2962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183439060914597822, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.000000040773916
       objectReference: {fileID: 0}
     - target: {fileID: 9183439060914597822, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.000000010669804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

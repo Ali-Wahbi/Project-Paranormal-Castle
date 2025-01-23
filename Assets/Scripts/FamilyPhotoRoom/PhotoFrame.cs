@@ -20,7 +20,9 @@ public class PhotoFrame : MonoBehaviour
     void Start()
     {
         inventoryItems = inventory.GetItemNames();
-        Debug.Log("item names: " + inventoryItems.Count);
+
+        CheckSlices();
+        Debug.Log("photoSlices size: " + photoSlices.Count);
     }
 
     // Update is called once per frame
@@ -32,14 +34,19 @@ public class PhotoFrame : MonoBehaviour
     {
         foreach (MovingSlice slice in photoSlices)
         {
-
-            if (slice.item && inventoryItems.Contains(slice.item.ItemName))
+            if (!slice.item)
             {
-                slice.GetComponent<GameObject>().SetActive(true);
+                return;
+            }
+            if (inventoryItems.Contains(slice.item.ItemName))
+            {
+                slice.gameObject.SetActive(true);
+                Debug.Log("Activate Slice");
             }
             else
             {
-                slice.GetComponent<GameObject>().SetActive(false);
+                slice.gameObject.SetActive(false);
+                Debug.Log("De-activate Slice");
             }
 
         }
