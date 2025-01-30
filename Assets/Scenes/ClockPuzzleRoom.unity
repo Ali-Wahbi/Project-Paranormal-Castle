@@ -5019,6 +5019,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.26610813
       objectReference: {fileID: 0}
+    - target: {fileID: 1887631912127621668, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3863188649355964653, guid: a38930472f3d67c4bae6dfd5030b1c46, type: 3}
       propertyPath: cam
       value: 

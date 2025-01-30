@@ -2866,6 +2866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPosition: {fileID: 0}
+  PlayerBody: {fileID: 1887631912127621668}
   LookCamera: {fileID: 5668645404425233639}
   originalCamSpeedY: 2
   originalCamSpeedX: 300

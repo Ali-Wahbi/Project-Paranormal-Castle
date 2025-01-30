@@ -3001,12 +3001,12 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     - name: Owl
-      sentences: Surprised I am!
+      sentences: I am surprised!
       SenteceFinishedEvents:
         m_PersistentCalls:
           m_Calls: []
     - name: Owl
-      sentences: Next room you may proceed!!
+      sentences: You may proceed to the next room!!
       SenteceFinishedEvents:
         m_PersistentCalls:
           m_Calls: []

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8325bddebdc55e4eb9b58bdf28d3194, type: 3}
-  m_Name: PhotoSlice1
+  m_Name: PhotoFragment1
   m_EditorClassIdentifier: 
-  ItemName: Photo Slice 1
+  ItemName: Photo Fragment 1
   ItemDescription: Obtained from room 1
   SmallIcon: {fileID: 21300000, guid: 00f62550587b4234da0dac301d2d4d25, type: 3}
   LargIcon: {fileID: 21300000, guid: 00f62550587b4234da0dac301d2d4d25, type: 3}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8325bddebdc55e4eb9b58bdf28d3194, type: 3}
-  m_Name: PhotoSlice2
+  m_Name: PhotoFragment2
   m_EditorClassIdentifier: 
-  ItemName: Photo Slice 2
+  ItemName: Photo Fragment 2
   ItemDescription: 'Obtained From Room 2
 
 '

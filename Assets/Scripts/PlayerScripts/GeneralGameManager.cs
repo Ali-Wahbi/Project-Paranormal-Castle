@@ -8,6 +8,7 @@ public class GeneralGameManager : MonoBehaviour
     // Fix Clock puzzle highlights
 
     [SerializeField] Transform StartPosition;
+    [SerializeField] GameObject PlayerBody;
 
     characterScript character;
     PlayerInteractor interactor;
@@ -44,6 +45,7 @@ public class GeneralGameManager : MonoBehaviour
 
     public void EnablePlayer()
     {
+        EnablePlayerBody();
         EnablePlayerMovement();
         EnablePlayerInteraction();
         EnableCameraMovement();
@@ -54,8 +56,18 @@ public class GeneralGameManager : MonoBehaviour
         DisablePlayerMovement();
         DisablePlayerInteraction();
         DisableCameraMovement();
+        DisablePlayerBody();
     }
 
+    void DisablePlayerBody()
+    {
+        PlayerBody.SetActive(false);
+    }
+
+    void EnablePlayerBody()
+    {
+        PlayerBody.SetActive(true);
+    }
     void EnablePlayerMovement()
     {
         if (character != null)
