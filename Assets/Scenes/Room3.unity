@@ -620,6 +620,74 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215839007}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &294475352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421021850219509952, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210422121743016384, guid: b657ffbd953968a429a8317072921055, type: 3}
+      propertyPath: m_Name
+      value: RewardManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b657ffbd953968a429a8317072921055, type: 3}
+--- !u!114 &294475353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2192536365482698841, guid: b657ffbd953968a429a8317072921055, type: 3}
+  m_PrefabInstance: {fileID: 294475352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e02672a53edac409a1c7a8bd1ec36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &322453432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,7 +1266,7 @@ MonoBehaviour:
   - {fileID: 356919676}
   mistakesIndicatorManager: {fileID: 1435052401}
   mistakesIndicatorDialogue: {fileID: 908177886}
-  incorrectColor: {r: 1, g: 0.216981, b: 0.216981, a: 0}
+  incorrectColor: {r: 1, g: 0.216981, b: 0.216981, a: 1}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   maxMistakes: 3
   numberOfCorrect: 0
@@ -1208,6 +1276,18 @@ MonoBehaviour:
       - m_Target: {fileID: 671949273}
         m_TargetAssemblyTypeName: IncorrectItemsHandler, Assembly-CSharp
         m_MethodName: DisableChildrenInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 294475353}
+        m_TargetAssemblyTypeName: RewardsManager, Assembly-CSharp
+        m_MethodName: PuzzleFinished
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4342,9 +4422,10 @@ SceneRoots:
   - {fileID: 200794825}
   - {fileID: 1856021278}
   - {fileID: 322453432}
+  - {fileID: 1659169216}
+  - {fileID: 294475352}
   - {fileID: 1115457878}
   - {fileID: 800533841}
-  - {fileID: 1659169216}
   - {fileID: 630945607}
   - {fileID: 1435052402}
   - {fileID: 908177887}

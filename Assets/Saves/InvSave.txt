@@ -1,1 +1,1 @@
-{"InvItems":["Spade Key"]}
+{"InvItems":["Photo Fragment 2"]}

@@ -8,6 +8,8 @@ public class PauseController : MonoBehaviour
     private bool isPaused = false; // Tracks the game's paused state
     public GameObject pausescreen; // Reference to the pause screen UI GameObject
 
+    // public bool MouseState = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,13 @@ public class PauseController : MonoBehaviour
 
     void PauseGame()
     {
+        // Handle cursor appearance:
+        // Get mouse current visability
+        // MouseState = Cursor.visible;
+        // Show mouse cursor
+        // Cursor.visible = true;
+
+
         Time.timeScale = 0; // Stop time
         isPaused = true;
 
@@ -49,6 +58,7 @@ public class PauseController : MonoBehaviour
         {
             pausescreen.SetActive(true); // Show the pause screen
         }
+
 
         Debug.Log("Game Paused");
     }
@@ -63,10 +73,17 @@ public class PauseController : MonoBehaviour
             pausescreen.SetActive(false); // Hide the pause screen
         }
 
+
+        // Handle cursor appearance:
+        // Return mouse cursor to original state
+        // Debug.Log("Mouse visible: " + Cursor.visible);
+        // Cursor.visible = MouseState;
+
         Debug.Log("Game Resumed");
     }
 
-    public void QuitToMainMenu(){
+    public void QuitToMainMenu()
+    {
         Time.timeScale = 1; // Resume time
         Debug.Log("Quit is called");
         SceneManager.LoadScene(0);

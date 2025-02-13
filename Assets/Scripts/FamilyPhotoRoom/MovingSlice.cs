@@ -4,17 +4,18 @@ using UnityEngine;
 using PrimeTween;
 
 public class MovingSlice : MonoBehaviour
-{   
+{
     [Tooltip("Required Item for the photo slice")]
     public InventoryItem item;
 
     // Start is called before the first frame update
-    void Start(){
+    void Start()
+    {
         outline = GetComponent<Outline>();
         if (!outline)
         {
             Debug.LogError("Outline Component Not Found!!");
-        }        
+        }
     }
 
     #region Outline
@@ -23,11 +24,13 @@ public class MovingSlice : MonoBehaviour
     [SerializeField] Color HoverColor;
     [SerializeField] Color DragColor;
 
-    void SetOutlineVisiblity(bool enabled){
+    void SetOutlineVisiblity(bool enabled)
+    {
         outline.enabled = enabled;
     }
 
-    void SetOutlineColor(Color color){
+    void SetOutlineColor(Color color)
+    {
         outline.OutlineColor = color;
     }
     #endregion
@@ -35,43 +38,52 @@ public class MovingSlice : MonoBehaviour
 
 
     #region Interaction
-    Vector3 mPos ;
+    Vector3 mPos;
     bool isDragged = false;
 
-    Vector3 GetMousePosition(){
+    Vector3 GetMousePosition()
+    {
         return Camera.main.WorldToScreenPoint(transform.position);
     }
 
     // Show Outline
-    private void OnMouseEnter() {
+    private void OnMouseEnter()
+    {
         SetOutlineVisiblity(true);
-        if (isDragged){
+        if (isDragged)
+        {
             SetOutlineColor(DragColor);
-        }else {
+        }
+        else
+        {
             SetOutlineColor(HoverColor);
         }
     }
 
     // Hide Outiline
-    private void OnMouseExit() {
+    private void OnMouseExit()
+    {
         SetOutlineVisiblity(false);
     }
 
-    private void OnMouseDown() {
+    private void OnMouseDown()
+    {
         mPos = Input.mousePosition - GetMousePosition();
         SetOutlineColor(DragColor);
     }
 
-    private void OnMouseDrag() {
+    private void OnMouseDrag()
+    {
         isDragged = true;
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mPos); 
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mPos);
     }
 
-    private void OnMouseUpAsButton() {
+    private void OnMouseUpAsButton()
+    {
         // Debug.Log("Mouse released");
-        
+
         isDragged = false;
-        
+
         SetOutlineColor(HoverColor);
         CheckCorrect();
     }
@@ -81,30 +93,37 @@ public class MovingSlice : MonoBehaviour
     #region Checking
     [SerializeField] Transform CorrectPosition;
     [SerializeField] float CorrectionOffset = 3f;
+    [SerializeField] SlicesCounter slicesCounter;
 
     public float distance;
     // cp: 5
     // 2 + 2 = 4
 
-    bool CheckCorrect(){
+    bool CheckCorrect()
+    {
         // bool xCorrect;
         Vector3 currentPos = transform.position;
         distance = Vector3.Distance(currentPos, CorrectPosition.position);
-        if(distance <= CorrectionOffset){
+        if (distance <= CorrectionOffset)
+        {
             Debug.Log("Object within correct radius");
             TweenPosition();
             DisableCollider();
+
+            if (slicesCounter) slicesCounter.IncrementCounter();
         }
         return false;
     }
 
-    void TweenPosition(){
-        Vector3 endValue = new Vector3(CorrectPosition.position.x, CorrectPosition.position.y, transform.position.z );
+    void TweenPosition()
+    {
+        Vector3 endValue = new Vector3(CorrectPosition.position.x, CorrectPosition.position.y, transform.position.z);
         Tween.Position(transform, endValue, duration: 0.5f, ease: Ease.InOutSine).OnComplete(() => transform.position = endValue);
     }
-    void DisableCollider(){
+    void DisableCollider()
+    {
         GetComponent<BoxCollider>().enabled = false;
     }
     #endregion
-   
+
 }

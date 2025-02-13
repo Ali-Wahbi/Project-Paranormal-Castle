@@ -2678,6 +2678,7 @@ GameObject:
   - component: {fileID: 726219017879702822}
   - component: {fileID: 1043044093672723369}
   - component: {fileID: 4605794892765884761}
+  - component: {fileID: 7207972126373440817}
   m_Layer: 0
   m_Name: PlayerBot
   m_TagString: Untagged
@@ -2870,6 +2871,20 @@ MonoBehaviour:
   LookCamera: {fileID: 5668645404425233639}
   originalCamSpeedY: 2
   originalCamSpeedX: 300
+--- !u!114 &7207972126373440817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220735595671114235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3eb5a0b937b27f4bbc53da438db89ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseIcon: {fileID: 0}
+  offset: {x: 0, y: 0}
 --- !u!1 &7234582388054081749
 GameObject:
   m_ObjectHideFlags: 0

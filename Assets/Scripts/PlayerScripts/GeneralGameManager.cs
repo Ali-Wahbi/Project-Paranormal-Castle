@@ -12,6 +12,7 @@ public class GeneralGameManager : MonoBehaviour
 
     characterScript character;
     PlayerInteractor interactor;
+    ChangeMouse mouseController;
     public CinemachineFreeLook LookCamera;
     public float originalCamSpeedY;
     public float originalCamSpeedX;
@@ -23,15 +24,13 @@ public class GeneralGameManager : MonoBehaviour
         // get the components from the player
         character = GetComponent<characterScript>();
         interactor = GetComponent<PlayerInteractor>();
+        mouseController = GetComponent<ChangeMouse>();
 
-        // get original speed of the camera
-        SetToOriginalSpeed();
+        // set original speed of the camera
+        LookCamera.m_XAxis.Value = StartPosition.eulerAngles.y - 90;
+        // SetToOriginalSpeed();
     }
 
-    private void Reset()
-    {
-        Debug.Log("General player Reset is called");
-    }
 
 
     void SetToStartPosition()
@@ -47,16 +46,22 @@ public class GeneralGameManager : MonoBehaviour
     {
         EnablePlayerBody();
         EnablePlayerMovement();
+
         EnablePlayerInteraction();
         EnableCameraMovement();
+
+        HideMouseCursor();
     }
 
     public void DisablePlayer()
     {
         DisablePlayerMovement();
         DisablePlayerInteraction();
+
         DisableCameraMovement();
         DisablePlayerBody();
+
+        ShowMouseCursor();
     }
 
     void DisablePlayerBody()
@@ -101,14 +106,6 @@ public class GeneralGameManager : MonoBehaviour
         }
     }
 
-    // allow the player to move the camera 
-    void EnableCameraMovement()
-    {
-        if (LookCamera)
-        {
-            SetToOriginalSpeed();
-        }
-    }
 
     void SetToOriginalSpeed()
     {
@@ -117,10 +114,24 @@ public class GeneralGameManager : MonoBehaviour
         LookCamera.m_XAxis.m_MaxSpeed = originalCamSpeedX;
 
         // set the angle of the camera based on the direction the player is facing
-        LookCamera.m_XAxis.Value = StartPosition.eulerAngles.y - 90;
+        // LookCamera.m_XAxis.Value = StartPosition.eulerAngles.y - 90;
         // Debug.Log("camera x value: "+LookCamera.m_XAxis.Value);
     }
 
+
+    public void SetStartPosition(Transform NewPos)
+    {
+        StartPosition = NewPos;
+    }
+
+    // allow the player to move the camera 
+    void EnableCameraMovement()
+    {
+        if (LookCamera)
+        {
+            SetToOriginalSpeed();
+        }
+    }
     // don't allow the player to move the camera
     void DisableCameraMovement()
     {
@@ -133,12 +144,13 @@ public class GeneralGameManager : MonoBehaviour
         }
     }
 
-
-    public void SetStartPosition(Transform NewPos)
+    void ShowMouseCursor()
     {
-        StartPosition = NewPos;
+        if (mouseController) mouseController.ShowMouse();
     }
 
-
-
+    void HideMouseCursor()
+    {
+        if (mouseController) mouseController.HideMouse();
+    }
 }
