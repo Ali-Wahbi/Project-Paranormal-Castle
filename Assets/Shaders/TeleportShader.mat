@@ -65,13 +65,13 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Dissolve: 0
-    - _EdgeWidth: 0.036
+    - _EdgeWidth: 0.067
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reverse: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 32, b: 23.48251, a: 0}
+    - _GlowColor: {r: 170.89003, g: 156.88686, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &825172517277495407
 MonoBehaviour:

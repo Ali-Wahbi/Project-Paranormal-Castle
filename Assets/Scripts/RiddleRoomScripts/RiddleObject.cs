@@ -53,7 +53,8 @@ public class RiddleObject : MonoBehaviour
 
     public void GetToStartPos()
     {
-        TeleportToPos(StartPosition);
+        if (transform.position != StartPosition)
+            TeleportToPos(StartPosition);
     }
 
 

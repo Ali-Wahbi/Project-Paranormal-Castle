@@ -29,6 +29,7 @@ public class GeneralGameManager : MonoBehaviour
         // set original speed of the camera
         LookCamera.m_XAxis.Value = StartPosition.eulerAngles.y - 90;
         // SetToOriginalSpeed();
+        EnableCameraMovement();
     }
 
 
@@ -67,11 +68,13 @@ public class GeneralGameManager : MonoBehaviour
     void DisablePlayerBody()
     {
         PlayerBody.SetActive(false);
+        GetComponent<CharacterController>().enabled = false;
     }
 
     void EnablePlayerBody()
     {
         PlayerBody.SetActive(true);
+        GetComponent<CharacterController>().enabled = true;
     }
     void EnablePlayerMovement()
     {
@@ -107,16 +110,6 @@ public class GeneralGameManager : MonoBehaviour
     }
 
 
-    void SetToOriginalSpeed()
-    {
-        // set the speed of the camera based on the original speed
-        LookCamera.m_YAxis.m_MaxSpeed = originalCamSpeedY;
-        LookCamera.m_XAxis.m_MaxSpeed = originalCamSpeedX;
-
-        // set the angle of the camera based on the direction the player is facing
-        // LookCamera.m_XAxis.Value = StartPosition.eulerAngles.y - 90;
-        // Debug.Log("camera x value: "+LookCamera.m_XAxis.Value);
-    }
 
 
     public void SetStartPosition(Transform NewPos)
@@ -129,7 +122,9 @@ public class GeneralGameManager : MonoBehaviour
     {
         if (LookCamera)
         {
-            SetToOriginalSpeed();
+            // set the speed of the camera based on the original speed
+            LookCamera.m_YAxis.m_MaxSpeed = originalCamSpeedY;
+            LookCamera.m_XAxis.m_MaxSpeed = originalCamSpeedX;
         }
     }
     // don't allow the player to move the camera
@@ -137,9 +132,8 @@ public class GeneralGameManager : MonoBehaviour
     {
         if (LookCamera)
         {
-
+            // set the speed of the camera to 0
             LookCamera.m_YAxis.m_MaxSpeed = 0;
-
             LookCamera.m_XAxis.m_MaxSpeed = 0;
         }
     }
@@ -152,5 +146,10 @@ public class GeneralGameManager : MonoBehaviour
     void HideMouseCursor()
     {
         if (mouseController) mouseController.HideMouse();
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("OnDestroy is overridden");
     }
 }

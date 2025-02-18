@@ -8,7 +8,7 @@ public class PauseController : MonoBehaviour
     private bool isPaused = false; // Tracks the game's paused state
     public GameObject pausescreen; // Reference to the pause screen UI GameObject
 
-    // public bool MouseState = false;
+    bool MouseState = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class PauseController : MonoBehaviour
     void Update()
     {
         // Check for user input to toggle the pause state
-        if (Input.GetKeyDown(KeyCode.Escape)) // Replace 'Escape' with any key or input you prefer
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) // Replace 'Escape' with any key or input you prefer
         {
             TogglePause();
         }
@@ -32,6 +32,7 @@ public class PauseController : MonoBehaviour
 
     void TogglePause()
     {
+
         if (isPaused)
         {
             ResumeGame();
@@ -46,9 +47,9 @@ public class PauseController : MonoBehaviour
     {
         // Handle cursor appearance:
         // Get mouse current visability
-        // MouseState = Cursor.visible;
+        MouseState = Cursor.visible;
         // Show mouse cursor
-        // Cursor.visible = true;
+        Cursor.visible = true;
 
 
         Time.timeScale = 0; // Stop time
@@ -77,7 +78,7 @@ public class PauseController : MonoBehaviour
         // Handle cursor appearance:
         // Return mouse cursor to original state
         // Debug.Log("Mouse visible: " + Cursor.visible);
-        // Cursor.visible = MouseState;
+        Cursor.visible = MouseState;
 
         Debug.Log("Game Resumed");
     }
