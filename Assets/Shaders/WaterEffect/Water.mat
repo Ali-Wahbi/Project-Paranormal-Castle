@@ -67,6 +67,8 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _WaterDepth: 0
-    m_Colors: []
+    - _WaterDepth: 13.78
+    m_Colors:
+    - _DeepWater: {r: 0, g: 0.9960575, b: 1, a: 0}
+    - _ShallowWater: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
