@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlurBgMat
-  m_Shader: {fileID: -6465566751694194690, guid: bc9a01fdece3b814ca164a16bc8bd640, type: 3}
+  m_Name: SpriteBlurMat
+  m_Shader: {fileID: -6465566751694194690, guid: 5f5043c8e41a0de49bf89c8ccc40e848, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -38,20 +38,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 1
-    - _BUILTIN_QueueControl: -1
-    - _BUILTIN_QueueOffset: 0
-    - _BlurValue: 0.01
-    - _Divider: 2
-    - _Divisions: 5
-    - _ExtraBlur: 1
-    - _ExtraDivisions: 0
-    - _NormalDivisions: 10
-    - _QueueControl: 0
-    - _QueueOffset: 0
+    - _BlurValue: 1
+    - _MaxBlur: 0.005
+    - _NormalDivider: 10
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &344627103809180228
+--- !u!114 &5425864831369021801
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,16 +57,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 7
---- !u!114 &1769535219222885581
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0

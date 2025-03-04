@@ -45,22 +45,32 @@ public class GeneralGameManager : MonoBehaviour
 
     public void EnablePlayer()
     {
+        SpecialEnabled();
         EnablePlayerBody();
-        EnablePlayerMovement();
+    }
 
+    public void DisablePlayer()
+    {
+        SpecialDisable();
+        DisablePlayerBody();
+    }
+
+    public void SpecialEnabled()
+    {
+        EnablePlayerMovement();
         EnablePlayerInteraction();
+
         EnableCameraMovement();
 
         HideMouseCursor();
     }
 
-    public void DisablePlayer()
+    public void SpecialDisable()
     {
         DisablePlayerMovement();
         DisablePlayerInteraction();
 
         DisableCameraMovement();
-        DisablePlayerBody();
 
         ShowMouseCursor();
     }
