@@ -38,11 +38,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 1
-    - _BlurValue: 1
-    - _MaxBlur: 0.005
+    - _BlurValue: 0
+    - _MaxBlur: 0.01
     - _NormalDivider: 10
     m_Colors:
-    - _ColorTint: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 0.40441433, g: 0.44654083, b: 0.33279926, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &5425864831369021801
 MonoBehaviour:

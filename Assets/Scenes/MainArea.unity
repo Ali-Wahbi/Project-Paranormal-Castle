@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 483854091}
   - component: {fileID: 483854090}
   m_Layer: 0
-  m_Name: collectableObject - SpadeKey
+  m_Name: collectableObject - RoomKey 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae705ef235658b34abbd7606ef96e2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectItem: {fileID: 11400000, guid: ceddfe3ad087e9846879e4a79e5b51df, type: 2}
+  ObjectItem: {fileID: 11400000, guid: 4f6dff273a48afd48a7da7cd6bde1f2f, type: 2}
 --- !u!114 &483854091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 1
-  outlineColor: {r: 0, g: 1, b: 0.928514, a: 1}
+  outlineColor: {r: 0, g: 0.19496846, b: 0.181206, a: 1}
   outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
@@ -808,7 +808,7 @@ Transform:
   m_GameObject: {fileID: 483854089}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.13, y: 0, z: -13.63}
+  m_LocalPosition: {x: -3.1, y: 0.46, z: -14.07}
   m_LocalScale: {x: 0.24353883, y: 0.24353883, z: 0.24353883}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4008,7 +4008,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39351e65f01704741a427c3547410fac, type: 2}
+  - {fileID: 2100000, guid: 645cefb60651f7541b1714ac977c0b29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14798,7 +14798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3837660530160950292, guid: d079c7b282b3305459dc196991227220, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3899540546214473436, guid: d079c7b282b3305459dc196991227220, type: 3}
       propertyPath: LevelCollectables.Array.size
@@ -15710,7 +15710,7 @@ MonoBehaviour:
   UseIndex: 1
   NextRoomIndex: 2
   NextRoomName: 
-  RequiredItem: {fileID: 11400000, guid: ceddfe3ad087e9846879e4a79e5b51df, type: 2}
+  RequiredItem: {fileID: 11400000, guid: 4f6dff273a48afd48a7da7cd6bde1f2f, type: 2}
   MainInventory: {fileID: 1465951273}
   lockedPopUp: {fileID: 1695275845606838118, guid: f2283f223db36e047a7c8fc3f3833f74, type: 3}
 --- !u!114 &5743789464871163129

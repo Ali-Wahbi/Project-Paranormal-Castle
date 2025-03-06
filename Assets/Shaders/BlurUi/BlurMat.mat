@@ -69,10 +69,10 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
-    - _Blur: 0.005
+    - _Blur: 0.006
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _numbers: 13
+    - _numbers: 10
     m_Colors:
-    - _BlurTint: {r: 0.89199996, g: 0.89199996, b: 0.89199996, a: 0.5019608}
+    - _BlurTint: {r: 0.32704395, g: 0.3116173, b: 0.3116173, a: 0.61960787}
   m_BuildTextureStacks: []
