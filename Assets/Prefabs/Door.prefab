@@ -152,7 +152,7 @@ GameObject:
   m_Layer: 0
   m_Name: Door
   m_TagString: Interactable
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -254,11 +254,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a7542a1ee122441802f191cf53f69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseIndex: 1
   NextRoomIndex: 1
   NextRoomName: 
-  UseIndex: 1
   RequiredItem: {fileID: 0}
   MainInventory: {fileID: 0}
+  lockedPopUp: {fileID: 1695275845606838118, guid: f2283f223db36e047a7c8fc3f3833f74, type: 3}
 --- !u!1 &6687448752151594940
 GameObject:
   m_ObjectHideFlags: 0

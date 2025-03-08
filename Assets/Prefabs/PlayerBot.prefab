@@ -2502,6 +2502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5372016776835466720}
   - component: {fileID: 5668645404425233639}
+  - component: {fileID: 3026389166034412418}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -2632,6 +2633,36 @@ MonoBehaviour:
   - {fileID: 2021035641213215330}
   - {fileID: 2091808427860105526}
   - {fileID: 6069132067980595967}
+--- !u!114 &3026389166034412418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209841069211904076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &7220735595671114235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2678,7 @@ GameObject:
   - component: {fileID: 726219017879702822}
   - component: {fileID: 1043044093672723369}
   - component: {fileID: 4605794892765884761}
+  - component: {fileID: 7207972126373440817}
   m_Layer: 0
   m_Name: PlayerBot
   m_TagString: Untagged
@@ -2736,6 +2768,7 @@ MonoBehaviour:
   speed: 2
   runSpeed: 6
   walkSpeed: 0
+  gravity: 0.51
   turnSmoothTime: 0.3
 --- !u!114 &726219017879702822
 MonoBehaviour:
@@ -2834,6 +2867,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPosition: {fileID: 0}
+  PlayerBody: {fileID: 1887631912127621668}
+  LookCamera: {fileID: 5668645404425233639}
+  originalCamSpeedY: 2
+  originalCamSpeedX: 300
+--- !u!114 &7207972126373440817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220735595671114235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3eb5a0b937b27f4bbc53da438db89ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseIcon: {fileID: 0}
+  offset: {x: 0, y: 0}
 --- !u!1 &7234582388054081749
 GameObject:
   m_ObjectHideFlags: 0

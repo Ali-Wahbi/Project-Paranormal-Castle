@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8325bddebdc55e4eb9b58bdf28d3194, type: 3}
+  m_Name: RoomKey 4
+  m_EditorClassIdentifier: 
+  ItemName: Room Key
+  ItemDescription: A Small key with a Heart shape. Perhaps can be used to open a
+    closed door.
+  SmallIcon: {fileID: -69005323, guid: a4853b3cd234a51438ad5bbf6e3fe183, type: 3}
+  LargIcon: {fileID: -69005323, guid: a4853b3cd234a51438ad5bbf6e3fe183, type: 3}
+  isInspectable: 0

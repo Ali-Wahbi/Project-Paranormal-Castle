@@ -10,6 +10,8 @@ public class InventoryItem : ScriptableObject {
 
     public Sprite SmallIcon;
     public Sprite LargIcon;
+
+    public bool isInspectable = false;
     
     
 }
