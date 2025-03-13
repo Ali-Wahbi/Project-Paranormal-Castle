@@ -16,6 +16,8 @@ public class Sound
     [Header("Audio Source Settings")]
     [Range(0f, 1f)]
     public float Volume;
+    [Range(1f, 3f)]
+    public float Pitch = 1;
     public bool Loop;
 
     [HideInInspector]
@@ -37,6 +39,13 @@ public enum SoundType
 /// </summary>
 public enum SoundName
 {
-    Wind, ArabMusic
+    Wind, ArabMusic, NormalWalking, DoorOpen, DoorClose,
+}
+/// <summary>
+/// Sound Actions: Play, Stop, Pause, Resume
+/// </summary>
+public enum SoundAction
+{
+    Play, Stop, Pause, Resume
 }
 

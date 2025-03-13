@@ -12,7 +12,7 @@ public class characterScript : MonoBehaviour
     public float speed = 6f;
     public float runSpeed = 6f;
     public float walkSpeed;
-    
+
     public float gravity = 9.81f;
     private float verticalvelocity;
     bool isRunning = false;
@@ -24,30 +24,36 @@ public class characterScript : MonoBehaviour
 
     private Animator animator;
 
-    private void Start() {
+    private void Start()
+    {
         animator = GetComponent<Animator>();
 
         walkSpeed = speed;
     }
     // Update is called once per frame
     void Update()
-    {   
-        if (canMove){
+    {
+        if (canMove)
+        {
             Move();
         }
     }
 
-    public void OnMove(InputAction.CallbackContext context){
+    public void OnMove(InputAction.CallbackContext context)
+    {
         moveVector = context.ReadValue<Vector2>();
         // Horizontal: x, Vertical: y
     }
 
-    void Move(){
+    void Move()
+    {
 
         if (charController.isGrounded)
         {
             verticalvelocity = -0.1f * gravity * Time.deltaTime;
-        } else {
+        }
+        else
+        {
             verticalvelocity += -gravity * Time.deltaTime;
         }
 
@@ -56,50 +62,91 @@ public class characterScript : MonoBehaviour
 
         Vector3 moveDir = Vector3.zero;
 
-        if (direction.magnitude >= 0.1f){
+        if (direction.magnitude >= 0.1f)
+        {
 
             SetAnimatorState("iswalking", true);
+
+            if (!isPlayingMovementSound) PlayMovementSound();
 
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward ;
+            moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            
-        } else {
+
+        }
+        else
+        {
 
             SetAnimatorState("iswalking", false);
+
+            if (isPlayingMovementSound) StopMovementSound();
 
         }
         charController.Move(moveDir.normalized * speed * Time.deltaTime + Vector3.up * verticalvelocity);
     }
 
-    void SetAnimatorState(string parameter, bool state){
-        if (animator != null){
+    void SetAnimatorState(string parameter, bool state)
+    {
+        if (animator != null)
+        {
             animator.SetBool(parameter, state);
         }
-}
+    }
 
-    public void SwitchIsRunning(){
+    public void SwitchIsRunning()
+    {
         isRunning = !isRunning;
 
         animator.SetBool("isRunning", isRunning);
-        
-        if (isRunning){
+
+        if (isRunning)
+        {
             speed = runSpeed;
-        } else
+        }
+        else
         {
             speed = walkSpeed;
         }
     }
 
-    public void EnableMovement(){
+    public void EnableMovement()
+    {
         canMove = true;
     }
 
-    public void DisableMovement(){
+    public void DisableMovement()
+    {
         canMove = false;
     }
+    #region SFX
+
+    bool isPlayingMovementSound = false;
+    bool soundHasStarted = false;
+    void PlayMovementSound()
+    {
+        if (!isPlayingMovementSound) isPlayingMovementSound = true;
+        AudioManager am = FindAnyObjectByType<AudioManager>();
+        if (am)
+        {
+            if (!soundHasStarted)
+            {
+                am.SetSoundClip(SoundName.NormalWalking, SoundAction.Play);
+                soundHasStarted = true;
+            }
+            else am.SetSoundClip(SoundName.NormalWalking, SoundAction.Resume);
+        }
+    }
+
+    void StopMovementSound()
+    {
+        if (isPlayingMovementSound) isPlayingMovementSound = false;
+        AudioManager am = FindAnyObjectByType<AudioManager>();
+        if (am) am.SetSoundClip(SoundName.NormalWalking, SoundAction.Pause);
+    }
+
+    #endregion
 }
