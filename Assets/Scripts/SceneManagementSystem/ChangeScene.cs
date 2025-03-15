@@ -55,6 +55,7 @@ public class ChangeScene : MonoBehaviour
         if (isGoingToNextRoom) return;
         isGoingToNextRoom = true;
         // Play Fade Animation
+        PlayFadeAnimation();
         OpenDoor();
         StartCoroutine(ChangeRoomWait());
 
@@ -77,16 +78,23 @@ public class ChangeScene : MonoBehaviour
         Destroy(go, 3f);
     }
 
+    void PlayFadeAnimation()
+    {
+        LoadingManager lm = FindAnyObjectByType<LoadingManager>();
+        if (lm) lm.ShowLoadingScreen();
+    }
+
     // Open the door with animation and sound
     void OpenDoor()
     {
         if (dr) dr.RotateDoor();
     }
 
+    [SerializeField] float WaitBeforeChanging = 1f;
     // Wait for the door to open then go to the next room
     IEnumerator ChangeRoomWait()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(WaitBeforeChanging);
         GotoRoom();
     }
 

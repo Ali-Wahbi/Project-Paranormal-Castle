@@ -6,26 +6,14 @@ public class DoorRotator : MonoBehaviour
 {
     public float rotateValue = 10f;
     public float duration = 0.5f;
-    public bool reverse = false;
+    public bool reverseRotation = false;
+    public bool reverseSound = false;
 
     public void RotateDoor()
     {
-        if (reverse)
-        {
-
-            // float startRotation = transform.eulerAngles.y;
-            // float endRotation = startRotation + rotateValue;
-            // SetRotation(endRotation);
-
-            PlaySound(SoundName.DoorClose);
-            StartCoroutine(RotateOverTime(rotateValue * -1, duration));
-        }
-        else
-        {
-
-            PlaySound(SoundName.DoorOpen);
-            StartCoroutine(RotateOverTime(rotateValue, duration));
-        }
+        rotateValue = reverseRotation ? rotateValue * -1 : rotateValue;
+        StartCoroutine(RotateOverTime(rotateValue, duration));
+        PlaySound(reverseSound ? SoundName.DoorClose : SoundName.DoorOpen);
     }
 
     private IEnumerator RotateOverTime(float rotateValue, float duration)

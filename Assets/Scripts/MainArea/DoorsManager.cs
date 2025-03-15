@@ -16,12 +16,13 @@ public class DoorsManager : MonoBehaviour
 
     string fullPath = Application.dataPath + "/Saves/";
     public string SaveFile = "PosSave";
+    public bool UseSavedPos = false;
     string fileName;
 
-    private void Start()
+    private void Awake()
     {
         fileName = SaveFile + ".txt";
-        Load();
+        if (UseSavedPos) Load();
         PlayerManager.SetStartPosition(lastUsedDoor);
     }
 

@@ -20,7 +20,7 @@ public class GeneralGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetToStartPosition();
+
         // get the components from the player
         character = GetComponent<characterScript>();
         interactor = GetComponent<PlayerInteractor>();
@@ -125,6 +125,7 @@ public class GeneralGameManager : MonoBehaviour
     public void SetStartPosition(Transform NewPos)
     {
         StartPosition = NewPos;
+        SetToStartPosition();
     }
 
     // allow the player to move the camera 

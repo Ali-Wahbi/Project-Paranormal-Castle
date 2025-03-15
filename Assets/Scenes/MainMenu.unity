@@ -440,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainButtons: {fileID: 431045135}
   PopButtons: {fileID: 379239613}
+  StartText: {fileID: 1806385026}
 --- !u!4 &552070412
 Transform:
   m_ObjectHideFlags: 0
