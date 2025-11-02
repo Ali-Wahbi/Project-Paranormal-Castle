@@ -431,12 +431,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UseIndex: 1
-  NextRoomIndex: 4
+  NextRoomIndex: 1
   NextRoomName: 
   RequiredItem: {fileID: 0}
   MainInventory: {fileID: 0}
   lockedPopUp: {fileID: 1695275845606838118, guid: f2283f223db36e047a7c8fc3f3833f74, type: 3}
-  WaitBeforeChange: 1
+  WaitBeforeChanging: 1
 --- !u!114 &322015440351713393
 MonoBehaviour:
   m_ObjectHideFlags: 0

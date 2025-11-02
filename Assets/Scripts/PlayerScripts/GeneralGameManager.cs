@@ -46,12 +46,16 @@ public class GeneralGameManager : MonoBehaviour
     public void EnablePlayer()
     {
         SpecialEnabled();
+
+        HideMouseCursor();
         EnablePlayerBody();
     }
 
     public void DisablePlayer()
     {
         SpecialDisable();
+
+        ShowMouseCursor();
         DisablePlayerBody();
     }
 
@@ -61,8 +65,6 @@ public class GeneralGameManager : MonoBehaviour
         EnablePlayerInteraction();
 
         EnableCameraMovement();
-
-        HideMouseCursor();
     }
 
     public void SpecialDisable()
@@ -71,8 +73,6 @@ public class GeneralGameManager : MonoBehaviour
         DisablePlayerInteraction();
 
         DisableCameraMovement();
-
-        ShowMouseCursor();
     }
 
     void DisablePlayerBody()
